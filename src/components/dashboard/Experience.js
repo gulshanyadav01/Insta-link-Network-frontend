@@ -5,14 +5,15 @@ import { connect } from "react-redux";
 import { deleteExperience } from "../../components/store/Actions/profile"; 
 import { FcOrganization} from "react-icons/fc"
 import { MdDelete } from "react-icons/md"
+import { BiBuildings } from "react-icons/bi"
 
 const Experience = ({experience, deleteExperience}) => {
     const experiences = experience.map(exp =>(
-        <div className = "bg-white h-10 m-4  shadow w-3/5 rounded flex justify-between">
-            <h1 className = "text-gray-800 font-medium m-2">{exp.company}</h1><hr className = "w-0.5 h-full bg-gray-100"></hr>
-            <h1 className = "text-gray-800 font-medium m-2">{exp.title}</h1><hr className = "w-0.5 h-full bg-gray-100"></hr>
-            <h1 className = "text-gray-800 font-medium m-2">{exp.from}</h1><hr className = "w-0.5 h-full bg-gray-100"></hr>
-            <button className = "px-3 py-0.5 bg-red-300 font-bold text-black rounded hover:bg-red-500" onClick = {() => deleteExperience(exp._id)} ><MdDelete className = "w-6 h-6"/></button>
+        <div className = "bg-gulshan-dascar h-10 m-4  shadow w-3/5 rounded flex justify-between">
+            <h1 className = "text-sunglow-600 font-medium m-2">{exp.company}</h1><hr className = "w-0.5 h-full bg-gulshan-inner"></hr>
+            <h1 className = "text-sunglow-600 font-medium m-2">{exp.title}</h1><hr className = "w-0.5 h-full bg-gulshan-inner"></hr>
+            <h1 className = "text-sunglow-600 font-medium m-2">{exp.from}</h1><hr className = "w-0.5 h-full bg-gulshan-inner"></hr>
+            <button className = "px-3 py-0.5  bg-red-300 font-bold text-black rounded hover:bg-red-500" onClick = {() => deleteExperience(exp._id)} ><MdDelete className = "w-6 h-6"/></button>
         </div>
         // <tr key = {exp._id} className = " bg-red-500 mt-2 "> 
         //     <div className = "h-20">
@@ -29,7 +30,7 @@ const Experience = ({experience, deleteExperience}) => {
     ) )
     return (
         <div>
-            <h2 className = "uppercase font-extrabold ml-6 mt-4 mb-8">Experience</h2>
+            <h2 className = "uppercase font-extrabold ml-8 mt-4 mb-8 text-xl text-white"> <BiBuildings className = "inline w-6 h-6 mr-2 text-scarlet-500"/>Experience</h2>
             {/* <table>
                 <thead>
                     <tr>

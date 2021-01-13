@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 // import Moment from "react-moment"; 
 import { deleteEducation} from "../store/Actions/profile"; 
 import { MdDelete } from "react-icons/md"
+import { MdSchool } from "react-icons/md"
 
 const Education = ({education, deleteEducation}) => {
     const educations = education.map(exp =>(
@@ -28,7 +29,7 @@ const Education = ({education, deleteEducation}) => {
     ) )
     return (
         <div>
-            <h2 className = "uppercase mt-8 font-extrabold ml-6  mb-8">Education</h2>
+            <h2 className = "uppercase font-extrabold ml-8 mt-4 mb-8 text-xl text-white"> <MdSchool className = "inline w-6 h-6 mr-2 text-scarlet-500"/>Experience</h2>
             {/* <table>
                 <thead>
                     <tr>
