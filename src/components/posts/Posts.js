@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 import { getPosts } from "../store/Actions/post"
 import PostItem from "./PostItem"; 
 import PostForm from "./PostForm"
-import { GoPrimitiveDot } from "react-icons/go"
+import { AiFillFlag } from "react-icons/ai"
+import { BsNewspaper } from "react-icons/bs"
 
 const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
 
@@ -18,7 +19,7 @@ const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
         <div className = " w-full flex justify-between mt-16">
             <div className = "w-3/5">
                 <div>
-                    <h1 className = "font-extrabold m-4 text-royalblue-500"><GoPrimitiveDot className = "w-8 h-8 text-royalblue-500 inline"/> Time Line </h1>
+                    <h1 className = "font-extrabold m-4 text-royalblue-500"><AiFillFlag className = "w-6 h-6 text-orange-600 inline"/> Time Line </h1>
                     <PostForm/>
                 </div>
                     {
@@ -38,12 +39,16 @@ const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
                 </div>
                
                 <div className = " flex-column mt-4">
-                <h1 className = "font-extrabold  text-royalblue-500"><GoPrimitiveDot className = "w-8 h-8 text-royalblue-500 inline"/> News </h1>
-                    <div className = "w-72 h-32 ml-2 bg-gulshan-dascar rounded">
-                        hello 
+                    <div>
+                         <h1 className = "font-extrabold  text-royalblue-500"><BsNewspaper className = "w-6 h-6 text-royalblue-500 ml-2 inline"/> News </h1>
                     </div>
-                    <div className = "w-72 h-32 ml-2 mt-4 bg-gulshan-dascar rounded">
-                        hello 
+                    <div className = "mt-4">
+                        <div className = "w-72 h-32 ml-2 bg-gulshan-dascar rounded">
+                            hello 
+                        </div>
+                        <div className = "w-72 h-32 ml-2 mt-4 bg-gulshan-dascar rounded">
+                            hello 
+                        </div>
                     </div>
                 </div>
             
