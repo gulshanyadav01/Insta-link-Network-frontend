@@ -5,7 +5,17 @@ module.exports = {
     extend: {
       colors: {
         gulshan:{
-          "50":"#F0F4F6",
+        "navbar":"#45436E",
+        "inner":"#232539",
+        "dascar":"#2E2E4C",
+        "text":"#333353",
+        "side":"#2E2E49",
+        "fontc":"#6F6D9E",
+        "inputdiv":"#343456",
+        "inputdivlow":"#323253",
+        "postimagediv":"#292946",
+        "postimagetext":"#25253E",
+        "postimagebot":"#292946",
           "100":"#c149fa",
           "200":"#FFFFFF",
           "300":"#FE4BAD",
@@ -71,7 +81,7 @@ module.exports = {
           '900': '#891535',
         },
         scarlet: {
-          '50':  '#fcf8f6',
+          '50':'#43416C',
           '100': '#fcefee',
           '200': '#fad5db',
           '300': '#f9b1ba',

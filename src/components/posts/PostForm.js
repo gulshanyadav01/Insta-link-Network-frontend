@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import { connect } from "react-redux"; 
 import { addPost } from "../store/Actions/post"; 
 import Logo from "../../asset/images/gulshan1.png"; 
+import { FaTelegram } from "react-icons/fa"
 
 
 const PostForm = ({ addPost }) => {
     const [text, setText ] = useState("");  
     return (
-        <div className = "w-6/12 h-auto m-4 bg-white shadow rounded-lg  ">
+        <div className = "w-full h-auto m-4 bg-gulshan-inputdiv shadow rounded-lg  ">
             {/* <h1 className = "font-bold">Say Something </h1> */}
             <form onSubmit = {(e) => {e.preventDefault();
              addPost({text})
@@ -17,15 +18,20 @@ const PostForm = ({ addPost }) => {
              <div className = "flex m-2">
                  <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 ml-2 rounded-full"/>
                  <textarea
-                cols = "50"
+                cols = "45"
                 rows ="2"
-                className = "rounded mt-4 ml-1"
+                className = "rounded mt-4 ml-1 bg-gulshan-inputdiv"
                 onChange = {(e) => setText(e.target.value)} 
                 placeholder = "say something "
                 value = {text} />
              </div>
-             <hr className = "w-full h-0.5 bg-gray-100"></hr> 
-                <button className = " w-16 h-8 m-2 bg-blue-300 hover:bg-royalblue-500 rounded">Add</button>
+                <div className = "bg-gulshan-inputdivlow flex rounded-b">
+                    <button className = "  m-2  "><FaTelegram className = "w-8 h-8 inline text-royalblue-400 hover:text-royalblue-600" /></button>
+                    <div className = "w-24 h-8 m-2 px-1 py-1 rounded-2xl border border-royalblue-500 hover:bg-royalblue-400">
+                        <h1 className = "text-sm text-gulshan-fontc " >who can see</h1>
+                    </div>
+
+                </div>
             </form>
            
         </div>

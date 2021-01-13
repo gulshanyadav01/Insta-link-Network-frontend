@@ -6,7 +6,7 @@ import Posts from "../posts/Posts";
 
 const ProfileItem = ({profile:{ user:{_id, name, avatar}, status, company}}) => {
     return (
-        <div className ="w-50 ml-12 m-4 h-52 border-1 border-gray-100  shadow rounded">
+        <div className ="w-50 ml-12 m-4 h-52 border-1 border-gray-100 bg-gulshan-dascar  shadow rounded">
             <div className = "w-50 rounded-t h-8 bg-gradient-to-r from-gulshan-1000 via-pink-500 to-gulshan-1100 flex-column">
                 {/* <h1 className = "w-20 h-20 border-white border-4 rounded-full bg-cerise-500 hover:bg-cerise-600  m-auto"> </h1> */}
                 <Link to = {`/profile/${_id}`}> <img src = {Logo} alt = "images"  className = "w-20 h-20 border-white border-4 rounded-full m-auto"/></Link>

@@ -15,24 +15,38 @@ const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
    
 
     return (
-        <div>
-        <div>
-            <h1 className = "font-extrabold m-4 text-royalblue-500"><GoPrimitiveDot className = "w-8 h-8 text-royalblue-500 inline"/> Time Line </h1>
-            <PostForm/>
-        </div>
-            {
-                loading ? <div> Loading ....</div> :
-                 <div className = "w-full">
-                    {
-                        posts.map((post) =>{
-                            return(
-                                <PostItem key = {post._id} post = {post}/>
-                            )
-                        })
-                    }
-          
+        <div className = " w-full flex justify-between mt-16">
+            <div className = "w-3/5">
+                <div>
+                    <h1 className = "font-extrabold m-4 text-royalblue-500"><GoPrimitiveDot className = "w-8 h-8 text-royalblue-500 inline"/> Time Line </h1>
+                    <PostForm/>
                 </div>
-            }
+                    {
+                        loading ? <div> Loading ....</div> :
+                        <div className = "w-full">
+                            {
+                                posts.map((post) =>{
+                                    return(
+                                        <PostItem key = {post._id} post = {post}/>
+                                    )
+                                })
+                            }
+                
+                        </div>
+                    }
+
+                </div>
+               
+                <div className = " flex-column mt-4">
+                <h1 className = "font-extrabold  text-royalblue-500"><GoPrimitiveDot className = "w-8 h-8 text-royalblue-500 inline"/> News </h1>
+                    <div className = "w-72 h-32 ml-2 bg-gulshan-dascar rounded">
+                        hello 
+                    </div>
+                    <div className = "w-72 h-32 ml-2 mt-4 bg-gulshan-dascar rounded">
+                        hello 
+                    </div>
+                </div>
+            
         </div>
     )
 }

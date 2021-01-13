@@ -6,32 +6,39 @@ import { AiOutlineLike } from "react-icons/ai";
 import { addLike, removeLike, deletePost } from "../store/Actions/post";
 import { AiOutlineDislike } from "react-icons/ai";
 import Logo from "../../asset/images/gulshan1.png"  
+import { FaHeart } from "react-icons/fa"
+import { BiCommentDetail } from "react-icons/bi"
 
 
 const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
     return (
-        <div>
-    <div className = "w-6/12 ml-4 mt-4 h-auto bg-white rounded-lg shadow">
-        <div className = "ml-4 mt-3 ">
+    <div>
+    <div className = "w-full ml-4 mt-4 h-auto bg-gulshan-dascar rounded-lg shadow">
+                {/* <div className = "ml-4 mt-3 "> */}
 
                
+                    <div className = "bg-gulshan-postimagediv h-16 rounded-t-lg">
+                            <div className = "flex m-2">
+                                <img src = {Logo} alt = {name} className = "w-12 h-12 mt-2 rounded-full"/>
+                                <h1 className = "font-bold text-royalblue-600 capitalize ml-2 mt-2">{name}</h1>
+                            </div>
+                          
+                    </div>
+                            {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
+                    <div className = " h-auto  text-gulshan-fontc bg-gulshan-postimagetext  ">
+                            <h1 className = "ml-4 mr-4" >{text}</h1>
+                    </div>
+                            {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
                     <div className = "flex">
-                            <img src = {Logo} alt = {name} className = "w-12 h-12 mt-2 rounded-full"/>
-                            <h1 className = "font-bold capitalize ml-2 mt-2">{name}</h1>
-                    </div>
-                            {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
-                    <div className = "w-full ml-3 mt-3 h-auto">
-                            <h1 >{text}</h1>
-                    </div>
-                            {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
-                    <div className = "flex mt-2">
-                        <div className = "flex  w-full h-12 ">
+                        <div className = "flex  w-full h-12 rounded-b  bg-gulshan-postimagebot">
                             <div className = "flex">
-                                    <button className = " w-16 h-8 bg-blue-200 rounded text-royalblue-700 hover:bg-royalblue-300" onClick = {() => addLike(_id)}><AiOutlineLike className = "w-8 h-8 ml-3  text-royalblue-500 inline"/>{likes.length} </button> 
+                                    <button  onClick = {() => addLike(_id)}><FaHeart className = "w-6 h-6 ml-3  text-red-500 inline hover:text-red-700"/> </button> 
+                                    <h1 className = "ml-1 mt-3 font-bold text-sm hover:text-royalblue-500 text-gulshan-fontc">{`likes(${likes.length})`} </h1>
                             </div>
                             <div className = "flex ">
-                                    <button className = "w-16 h-8 bg-blue-200 hover:bg-royalblue-300 ml-1 rounded " onClick = {() => removeLike(_id)}><AiOutlineDislike className = "w-8 h-8 ml-3  text-royalblue-500 inline"/></button> 
-                                    <button className = "w-20 h-8 bg-blue-200 ml-1 rounded hover:bg-royalblue-400 "><Link to = {`/post/${_id}`} className = "font-bold text-xs ">Comment</Link></button>
+                                    {/* <button className = "w-16 h-8 bg-blue-200 hover:bg-royalblue-300 ml-1 rounded " onClick = {() => removeLike(_id)}><AiOutlineDislike className = "w-8 h-8 ml-3  text-royalblue-500 inline"/></button>  */}
+                                    <BiCommentDetail className = "w-6 h-6 mt-4 ml-12 text-gulshan-fontc hover:text-royalblue-500"/>
+                                    <button className = "m-1"><Link to = {`/post/${_id}`} className = "font-bold text-sm hover:text-royalblue-600  ">Comment</Link></button>
                                     {
                                         !auth.loading && user === auth.user._id && (
                                             <button className = " w-16 h-8  ml-1 bg-red-400 hover:bg-red-600 rounded font-bold text-xs" onClick = {() => deletePost(_id)}>Delete</button>
@@ -42,9 +49,9 @@ const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text,
 
                         </div>
                     </div>
-        </div>
+        {/* </div> */}
                 
-    </div>
+        </div>
             
             
             

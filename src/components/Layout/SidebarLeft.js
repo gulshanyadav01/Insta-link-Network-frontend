@@ -16,14 +16,14 @@ import Hello from "../../Hello"
 import { TiMessages } from "react-icons/ti"
 import { FaRegBell } from "react-icons/fa"
 import { BsFillPeopleFill } from "react-icons/bs"
-// import { FiLogOut } from "react-icons/fi"
 // import Logo from "../../asset/images/gulshan1.png"
 
-const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
+const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
 
-    const Logout = () => {
-        logout(); 
-    }
+    // const Logout = () => {
+    //     logout(); 
+    // }
+
     const guestLink = (
         <div>
             <h1  className = ' ml-4 mr-4 mt-3 bg-white  hover:bg-gulshan-300 px-3 py-3 font-bold rounded text-gulshan-700 hover:text-gray-900 shadow '><FaPeopleCarry className = "inline text-royalblue-600 hover:text-white"/> <Link to = "/profiles">Developers</Link> </h1>
@@ -33,40 +33,31 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
     )
     const alwaysLink = (
         <div>
-            <h1 className = 'mt-8 ml-5 mr-1 bg-white hover:bg-gulshan-300 px-2 py-3 font-bold rounded text-gulshan-700 hover:text-gray-900 shadow '><GoDashboard className = "inline text-limegreen-500  hover:text-white " /><Link to =  "/dashboard"> Dashboard</Link></h1>
-            <h1  className = ' ml-5 mr-1 mt-3 bg-white hover:bg-gulshan-300 px-3 py-3 font-bold rounded text-gulshan-700 hover:text-gray-900 shadow '><FaPeopleCarry className = "inline text-royalblue-600 hover:text-white"/> <Link to = "/profiles">Developers</Link> </h1>
-            <h1  className = ' ml-5 mr-1 mt-3 bg-white hover:bg-gulshan-300 px-3 py-3 font-bold rounded text-gulshan-700 hover:text-gray-900 shadow '><CgFeed className = "inline text-royalblue-600 hover:text-white"/> <Link to = "/posts">Posts</Link> </h1>
-            <h1 className = ' ml-5 mr-1 mt-3 bg-white hover:bg-gulshan-300 px-3 py-3 font-bold rounded text-gulshan-700 hover:text-gray-900 shadow ' ><button  onClick = {Logout} className = "font-bold"> <FiLogOut className = "inline text-red-700  hover:text-white"/> Logout </button></h1>
+            <h1><GoDashboard className = "inline text-limegreen-500  hover:text-white " /><Link to =  "/dashboard"> Dashboard</Link></h1>
+            <h1><FaPeopleCarry className = "inline text-royalblue-600 hover:text-white"/> <Link to = "/profiles">Developers</Link> </h1>
+           
+            {/* <h1 className = ' ml-5 mr-1 mt-3 bg-white hover:bg-gulshan-300 px-3 py-3 font-bold rounded text-gulshan-700 hover:text-gray-900 shadow ' ><button  onClick = {Logout} className = "font-bold"> <FiLogOut className = "inline text-red-700  hover:text-white"/> Logout </button></h1> */}
         </div>
     )
 
     return (
-        <div>
-            <div className = "w-full h-12 bg-gulshan-navbar flex rounded fixed ">
-                <div className = "w-2/12  h-12">
+        <div className = "w-full flex h-screen  bg-gulshan-side">
+            <div className = "w-full mt-20 ml-4">
+               <h1 className = "text-gulshan-fontc font-semibold text-lg">Profile  </h1>
 
+                <div className = "flex mt-4">
+                    <img src = {Logo} className = "w-8 h-8 rounded-full" alt = "hello"/>
+                    <h1 className = "text-gulshan-fontc ml-3">gulshan</h1>
                 </div>
-                <div className = "w-3/12 h-12 ">
-                 hello
+                <div className  = "mt-8">
+                    <h1 className = "text-gulshan-fontc hover:text-royalblue-300"><GoDashboard className = "inline text-limegreen-500  hover:text-white " /><Link to =  "/dashboard"> Dashboard</Link></h1>
+                    <h1  className = ' text-gulshan-fontc mt-2 hover:text-royalblue-300 '><FaPeopleCarry className = "inline text-royalblue-600 hover:text-white"/> <Link to = "/profiles">Developers</Link> </h1>
+                    <h1 className = "text-gulshan-fontc mt-2 hover:text-royalblue-300 "><CgFeed className = "inline text-royalblue-600 hover:text-white"/> <Link to = "/posts">Posts</Link> </h1>
                 </div>
-                <div className = "w-3/12 h-12 ">
-                 hello
-                </div>
-                <div className = "w-2/12 h-12 flex ">
-                    <TiMessages className = 'w-6 h-6 '/>
-                    <FaRegBell className = "w-6 h-8"/>
-                    <BsFillPeopleFill className = "w-6 h-8"/>
-                </div>
-                <div className = "w-2/12 h-12 ml-12 mt-2 flex">
-                    { isAuthenticated &&  (<div className = "mt-1 text-gray-100 capitalize"> {user.name} </div>) }
-                    <img src = {Logo} alt = "helo" className = "w-8 h-8 ml-2 rounded-full" />
-                    <FiLogOut className = "w-6 h-6 text-royalblue-500 ml-4 mt-1"/>
-                    
-                   
-                </div>
+
+        
                 
             </div>
-            {/* <Hello/> */}
 
         </div>
             
@@ -83,14 +74,14 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
             //     {/* <h1 className = "ml-10 capitalize font-bold hover:underline  ">gulshan yadav</h1> */}
             // {/* </div> */}
             // {/* </div> */}
-            // {/* {isAuthenticated ? alwaysLink: guestLink } */}
+            // {/*  */}
             
             // {/* <Link to = "/dashboard"  className = ' ml-4 mr-4 mt-3  hover:bg-gulshan-300 px-12 py-3 font-bold rounded text-gulshan-700 hover:text-gray-900 shadow '>Dashboard</Link> */}
         
 
     )
 }
-Navbar.propTypes = {
+SidebarLeft.propTypes = {
     logout: PropTypes.func.isRequired,
     auth:PropTypes.object.isRequired,
 }
@@ -99,4 +90,4 @@ const mapStateToProps = state => ({
     profile: state.profile
 })
 
-export default connect(mapStateToProps, {logout})(Navbar);
+export default connect(mapStateToProps, {logout})(SidebarLeft);

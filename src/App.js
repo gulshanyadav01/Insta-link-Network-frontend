@@ -15,11 +15,12 @@ import AddExperience from "./components/profile-form/AddExperience";
 import AddEducation from "./components/profile-form/AddEducation";
 import Register from "./components/auth/Register"; 
 import Login from "./components/auth/Login";
-import Upbar from "./components/Layout/Upbar";
 import Profiles from "./components/Profiles/Profiles"; 
 import Profile from "./components/Profile/Profile"
 import Posts from "./components/posts/Posts" 
 import Post from "./components/Post/Post"
+import Hello from "./Hello"
+import SidebarLeft from "./components/Layout/SidebarLeft"; 
 
 if(localStorage.token){
   setAuthToken(localStorage.token);
@@ -36,25 +37,32 @@ const  App = () =>  {
     <Provider store = {store}>
       <Router>
           <Switch>
-            <div className = "flex flex-wrap">
-                  <div className ="w-2/12 h-screen bg-gulshan-50 " >
-                    <Navbar/>
+            <div className = "w-full">
+                <Navbar/>
+                  {/* </div> */}
+                  <div className = "w-full flex justify-between h-auto bg-gulshan-inner">
+                    <div className = "w-2/12 bg-gulshan-dascar  h-screen ">
+                        <SidebarLeft/>
+                    </div>
+                    <div className = "w-8/12">
+                      <Route exact path = "/hello" component = {Hello} /> 
+                      <Route exact path = "/profiles" component = {Profiles}/>
+                      <PrivateRoute exact path = "/dashboard" component = {Dashboard}/>
+                      <PrivateRoute exact path = "/createprofile" component = {CreateProfile}/>
+                      <PrivateRoute exact path = "/edit-profile" component = {EditProfile}/>
+                      <PrivateRoute exact path = "/add-experience" component = {AddExperience}/>
+                      <PrivateRoute exact path = "/add-education" component = {AddEducation}/>
+                      <PrivateRoute exact path = "/posts" component = {Posts}/>
+                      <Route exact path = "/register" component = {Register}/>
+                      <Route exact path = "/login" component = {Login}/>
+                      <Route exact path = "/profile/:userId" component = {Profile}/>
+                      <Route exact path  = "/post/:id" component = {Post}/>
+
+                    </div>
+                   
+                    <div className = "w-2/12  ml-16 bg-gulshan-dascar h-screen">
+                      hello4
                   </div>
-                  <div className = "w-10/12 h-auto bg-gulshan-50">
-                  <Alert/>
-                    {/* <Upbar/> */}
-                    <Route exact path = "/profiles" component = {Profiles}/>
-                    <PrivateRoute exact path = "/dashboard" component = {Dashboard}/>
-                    
-                    <PrivateRoute exact path = "/createprofile" component = {CreateProfile}/>
-                    <PrivateRoute exact path = "/edit-profile" component = {EditProfile}/>
-                    <PrivateRoute exact path = "/add-experience" component = {AddExperience}/>
-                    <PrivateRoute exact path = "/add-education" component = {AddEducation}/>
-                    <PrivateRoute exact path = "/posts" component = {Posts}/>
-                    <Route exact path = "/register" component = {Register}/>
-                    <Route exact path = "/login" component = {Login}/>
-                    <Route exact path = "/profile/:userId" component = {Profile}/>
-                    <Route exact path  = "/post/:id" component = {Post}/>
                 </div>
             </div>
         </Switch>
