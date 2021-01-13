@@ -16,6 +16,9 @@ import Hello from "../../Hello"
 import { TiMessages } from "react-icons/ti"
 import { FaRegBell } from "react-icons/fa"
 import { BsFillPeopleFill } from "react-icons/bs"
+import { FaSearch } from "react-icons/fa"
+import { FiFilter } from "react-icons/fi"
+
 // import { FiLogOut } from "react-icons/fi"
 // import Logo from "../../asset/images/gulshan1.png"
 
@@ -46,16 +49,23 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
                 <div className = "w-2/12  h-12">
 
                 </div>
-                <div className = "w-3/12 h-12 ">
-                 hello
+                <div className = "w-3/12 h-12 flex">
+                    <FiFilter className = "w-8 h-8 text-royalblue-500 inline mt-2 mr-1"/>
+                    <div className = "w-full h-8 mt-2 mb-1 bg-gulshan-search rounded-full">
+                       
+                        <input type = "text" placeholder = "enter name for search" className = "bg-gulshan-search rounded-full ml-2"/>
+                    </div>
+                    <button className = "w-32 h-8 mt-2 mb-1 ml-1 rounded-full border border-royalblue-500"> <FaSearch className = "inline text-royalblue-600 "/> Search  </button> 
+                 
                 </div>
                 <div className = "w-3/12 h-12 ">
-                 hello
+                 {/* hello */}
                 </div>
                 <div className = "w-2/12 h-12 flex ">
-                    <TiMessages className = 'w-6 h-6 '/>
-                    <FaRegBell className = "w-6 h-8"/>
-                    <BsFillPeopleFill className = "w-6 h-8"/>
+                    <Link to = "/profiles" > <BsFillPeopleFill className = "w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500"/> </Link>
+                    <TiMessages className = 'w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500'/>
+                    <FaRegBell className = "w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500"/>
+                    
                 </div>
                 <div className = "w-2/12 h-12 ml-12 mt-2 flex">
                     { isAuthenticated &&  (<div className = "mt-1 text-gray-100 capitalize"> {user.name} </div>) }

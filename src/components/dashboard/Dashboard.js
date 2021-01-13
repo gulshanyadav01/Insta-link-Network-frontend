@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 import DashboardAction from './DashboardAction';
 import Experience from "./Experience"; 
 import Education from "./Education"; 
+import { RiDashboard2Line } from "react-icons/ri"
 // import deleteAccount from "../../store/Actions/profile";
 
 const Dashboard = ({getCurrentProfile, deleteAccount,  auth: {user}, profile: {profile, loading, history}}) => {
@@ -15,7 +16,7 @@ const Dashboard = ({getCurrentProfile, deleteAccount,  auth: {user}, profile: {p
     },[getCurrentProfile]); 
 
     return loading && profile === null ? (<div><h1>loading...</h1></div>): <div>
-    <h2 className = "uppercase mt-8 font-extrabold ml-6 text-xl   mb-8">Dashboard</h2>
+    <h2 className = "uppercase mt-20 font-extrabold ml-6 text-xl text-white mb-8"><RiDashboard2Line className = "w-8 h-8 text-orange-600 mr-2 inline"/>Dashboard</h2>
 
     <DashboardAction/>
     {/* <h3>welcome {user && user.name}</h3> */}

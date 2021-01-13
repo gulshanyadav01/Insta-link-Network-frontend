@@ -16,6 +16,7 @@ module.exports = {
         "postimagediv":"#292946",
         "postimagetext":"#25253E",
         "postimagebot":"#292946",
+        "search":"#373759",
           "100":"#c149fa",
           "200":"#FFFFFF",
           "300":"#FE4BAD",

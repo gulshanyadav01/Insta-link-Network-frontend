@@ -20,9 +20,9 @@ const PostForm = ({ addPost }) => {
                  <textarea
                 cols = "45"
                 rows ="2"
-                className = "rounded mt-4 ml-1 bg-gulshan-inputdiv"
+                className = "rounded mt-4 ml-2 bg-gulshan-inputdiv"
                 onChange = {(e) => setText(e.target.value)} 
-                placeholder = "say something "
+                placeholder = "Write Something .... "
                 value = {text} />
              </div>
                 <div className = "bg-gulshan-inputdivlow flex rounded-b">

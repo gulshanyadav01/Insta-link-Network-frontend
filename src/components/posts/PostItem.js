@@ -13,7 +13,7 @@ import { BiCommentDetail } from "react-icons/bi"
 const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
     return (
     <div>
-    <div className = "w-full ml-4 mt-4 h-auto bg-gulshan-dascar rounded-lg shadow">
+    <div className = "w-full ml-4 mt-8 h-auto bg-gulshan-dascar rounded-lg shadow">
                 {/* <div className = "ml-4 mt-3 "> */}
 
                
@@ -25,7 +25,7 @@ const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text,
                           
                     </div>
                             {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
-                    <div className = " h-auto  text-gulshan-fontc bg-gulshan-postimagetext  ">
+                    <div className = "h-auto  text-gulshan-fontc bg-gulshan-postimagetext  ">
                             <h1 className = "ml-4 mr-4" >{text}</h1>
                     </div>
                             {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
