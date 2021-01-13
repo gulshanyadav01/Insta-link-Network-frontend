@@ -6,6 +6,7 @@ import PostItem from "./PostItem";
 import PostForm from "./PostForm"
 import { AiFillFlag } from "react-icons/ai"
 import { BsNewspaper } from "react-icons/bs"
+import  Logo  from "../../asset/images/gulshan1.png"
 
 const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
 
@@ -44,10 +45,16 @@ const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
                     </div>
                     <div className = "mt-4">
                         <div className = "w-72 h-32 ml-2 bg-gulshan-dascar rounded">
-                            hello 
+                            <div className = "mt-2">
+                                <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 rounded-full"/>
+                            </div>
+                           
                         </div>
-                        <div className = "w-72 h-32 ml-2 mt-4 bg-gulshan-dascar rounded">
-                            hello 
+                        <div className = "w-72 h-32 ml-2 bg-gulshan-dascar rounded">
+                            <div className = "m-2">
+                                <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 rounded-full"/>
+                            </div>
+                           
                         </div>
                     </div>
                 </div>
