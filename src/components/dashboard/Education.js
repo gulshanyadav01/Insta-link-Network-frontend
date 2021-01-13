@@ -7,10 +7,10 @@ import { MdDelete } from "react-icons/md"
 
 const Education = ({education, deleteEducation}) => {
     const educations = education.map(exp =>(
-        <div className = "bg-white h-10 m-4 shadow w-3/5 rounded flex justify-between hover:ring-2 hover:ring-red-300">
-            <h1 className = "text-gray-800 font-medium m-2">{exp.degree}</h1><hr className = "w-0.5 h-full bg-gray-200"></hr>
-            <h1 className = "text-gray-800 font-medium m-2">{exp.school}</h1><hr className = "w-0.5 h-full bg-gray-200"></hr>
-            <h1 className = "text-gray-800 font-medium m-2">{exp.fieldOfStudy}</h1><hr className = "w-0.5 h-full bg-gray-200"></hr>
+        <div className = "bg-gulshan-dascar h-10 m-4 shadow w-3/5 rounded flex justify-between hover:ring-2 hover:ring-red-300">
+            <h1 className = "text-royalblue-500  font-medium m-2">{exp.degree}</h1><hr className = "w-0.5 h-full bg-gulshan-inner"></hr>
+            <h1 className = "text-royalblue-500 font-medium m-2">{exp.school}</h1><hr className = "w-0.5 h-full bg-gulshan-inner"></hr>
+            <h1 className = "text-royalblue-500 font-medium m-2">{exp.fieldOfStudy}</h1><hr className = "w-0.5 h-full bg-gulshan-inner"></hr>
             <button className = "px-3 py-0.5 bg-red-300 font-bold text-black rounded hover:bg-red-500 " onClick = {() => deleteEducation(exp._id)} ><MdDelete className = "w-6 h-6" /></button>
         </div>
         // <tr key = {exp._id} className = " bg-red-500 mt-2 "> 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Link } from "react-router-dom"; 
 import {connect } from "react-redux"; 
 import PropTypes from "prop-types"; 
@@ -23,6 +23,7 @@ import { FiFilter } from "react-icons/fi"
 // import Logo from "../../asset/images/gulshan1.png"
 
 const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
+    // useEffect(())
 
     const Logout = () => {
         logout(); 
@@ -46,10 +47,11 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
     return (
         <div>
             <div className = "w-full h-12 bg-gulshan-navbar flex rounded fixed ">
-                <div className = "w-2/12  h-12">
-
+                <div className = "w-2/12  h-12 flex">
+                    <Link to = "/posts"> <h1 className = "m-2 font-bold text-xl text-orange-500">Developers Network</h1> </Link>
                 </div>
                 <div className = "w-3/12 h-12 flex">
+                    <hr className = "w-1 h-full bg-gulshan-dascar"></hr>
                     <FiFilter className = "w-8 h-8 text-royalblue-500 inline mt-2 mr-1"/>
                     <div className = "w-full h-8 mt-2 mb-1 bg-gulshan-search rounded-full">
                        
@@ -63,13 +65,13 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
                 </div>
                 <div className = "w-2/12 h-12 flex ">
                     <Link to = "/profiles" > <BsFillPeopleFill className = "w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500"/> </Link>
-                    <TiMessages className = 'w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500'/>
+                    <Link to ="/posts"> <TiMessages className = 'w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500'/></Link>
                     <FaRegBell className = "w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500"/>
                     
                 </div>
                 <div className = "w-2/12 h-12 ml-12 mt-1 flex">
                     { isAuthenticated &&  (<div className = "mt-1 text-gray-100 capitalize"> {user.name} </div>) }
-                    <img src = {Logo} alt = "helo" className = "w-8 h-8 ml-2 rounded-full" />
+                    <img src = {Logo} alt = "helo" className = "w-8 h-8 ml-2 rounded-full cursor-pointer" />
                     {/* <button  onClick = {Logout} className = "font-bold"> <FiLogOut className = "inline text-red-700  hover:text-white"/> Logout </button> */}
                     {/* <div className = "w-8 h-8 rounded-full bg-gulshan-navar hover:bg-royalblue-500"> */}
                         <FiLogOut onClick = {Logout} className = "w-6 h-6 mt-1 cursor-pointer text-scarlet-500 hover:text-royalblue-600 ml-4"/>

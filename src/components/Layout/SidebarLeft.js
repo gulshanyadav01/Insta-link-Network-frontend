@@ -49,8 +49,8 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
                <h1 className = "text-gulshan-fontc font-semibold text-lg">Profile  </h1>
 
                 <div className = "flex mt-4">
-                    <img src = {Logo} className = "w-8 h-8 rounded-full" alt = "hello"/>
-                    <h1 className = "text-gulshan-fontc ml-3">gulshan</h1>
+                    <img src = {Logo} className = "w-8 h-8 rounded-full cursor-pointer" alt = "hello"/>
+                    <h1 className = "text-royalblue-400 capitalize font-bold ml-3">gulshan</h1>
                 </div>
                 <div className  = "mt-8">
                     <h1 className = "text-royalblue-500 font-bold hover:text-royalblue-300"><RiDashboard2Line className = "w-6 h-6 text-limegreen-600 mr-2 inline"/><Link to =  "/dashboard"> Dashboard</Link></h1>

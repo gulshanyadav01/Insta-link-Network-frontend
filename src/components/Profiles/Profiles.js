@@ -10,8 +10,8 @@ const Profiles = ({ getProfiles, profile: {profiles, loading }}) => {
         getProfiles();
     }, [])
     return (
-        <div className = "m-8 w-full h-auto    ">
-            <div className = "w-full bg-gulshan-inner shadow rounded ">
+        <div className = "m-8 mt-20 w-full h-auto  ">
+            <div className = "w-full bg-gulshan-inner  shadow-3xl rounded ">
                 { loading ? <div><h1>loading</h1></div> : <div className = "flex flex-wrap w-full">
                     {profiles.length> 0 ? (
                         profiles.map(profile => (
