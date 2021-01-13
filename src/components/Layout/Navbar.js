@@ -67,10 +67,13 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
                     <FaRegBell className = "w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500"/>
                     
                 </div>
-                <div className = "w-2/12 h-12 ml-12 mt-2 flex">
+                <div className = "w-2/12 h-12 ml-12 mt-1 flex">
                     { isAuthenticated &&  (<div className = "mt-1 text-gray-100 capitalize"> {user.name} </div>) }
                     <img src = {Logo} alt = "helo" className = "w-8 h-8 ml-2 rounded-full" />
-                    <FiLogOut className = "w-6 h-6 text-royalblue-500 ml-4 mt-1"/>
+                    {/* <button  onClick = {Logout} className = "font-bold"> <FiLogOut className = "inline text-red-700  hover:text-white"/> Logout </button> */}
+                    {/* <div className = "w-8 h-8 rounded-full bg-gulshan-navar hover:bg-royalblue-500"> */}
+                        <FiLogOut onClick = {Logout} className = "w-6 h-6 mt-1 cursor-pointer text-scarlet-500 hover:text-royalblue-600 ml-4"/>
+                    {/* </div> */}
                     
                    
                 </div>
