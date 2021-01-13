@@ -16,6 +16,7 @@ import Hello from "../../Hello"
 import { TiMessages } from "react-icons/ti"
 import { FaRegBell } from "react-icons/fa"
 import { BsFillPeopleFill } from "react-icons/bs"
+import { RiDashboard2Line } from "react-icons/ri"
 // import Logo from "../../asset/images/gulshan1.png"
 
 const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
@@ -50,7 +51,7 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
                     <h1 className = "text-gulshan-fontc ml-3">gulshan</h1>
                 </div>
                 <div className  = "mt-8">
-                    <h1 className = "text-royalblue-500 font-bold hover:text-royalblue-300"><GoDashboard className = "inline text-limegreen-500  hover:text-white " /><Link to =  "/dashboard"> Dashboard</Link></h1>
+                    <h1 className = "text-royalblue-500 font-bold hover:text-royalblue-300"><RiDashboard2Line className = "w-8 h-8 text-orange-600 mr-2 inline"/><Link to =  "/dashboard"> Dashboard</Link></h1>
                     <h1  className = ' text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 '><FaPeopleCarry className = "inline text-royalblue-600 hover:text-white"/> <Link to = "/profiles">Developers</Link> </h1>
                     <h1 className = "text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 "><CgFeed className = "inline text-royalblue-600 hover:text-white"/> <Link to = "/posts">Posts</Link> </h1>
                 </div>

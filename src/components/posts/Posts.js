@@ -40,7 +40,7 @@ const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
                
                 <div className = " flex-column mt-4">
                     <div>
-                         <h1 className = "font-extrabold  text-royalblue-500"><BsNewspaper className = "w-6 h-6 text-royalblue-500 ml-2 inline"/> News </h1>
+                         <h1 className = "font-extrabold  text-royalblue-500"><BsNewspaper className = "w-6 h-6 text-scarlet-500 ml-2 inline"/> News </h1>
                     </div>
                     <div className = "mt-4">
                         <div className = "w-72 h-32 ml-2 bg-gulshan-dascar rounded">
