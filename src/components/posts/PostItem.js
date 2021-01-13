@@ -2,9 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"; 
 import { connect } from "react-redux"; 
-import { AiOutlineLike } from "react-icons/ai"; 
 import { addLike, removeLike, deletePost } from "../store/Actions/post";
-import { AiOutlineDislike } from "react-icons/ai";
 import Logo from "../../asset/images/gulshan1.png"  
 import { FaHeart } from "react-icons/fa"
 import { BiCommentDetail } from "react-icons/bi"

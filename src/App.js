@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect } from "react"; 
+import React, {  useEffect } from "react"; 
 import Navbar from "./components/Layout/Navbar"; 
-import Landing from "./components/Layout/Landing"; 
+// import Landing from "./components/Layout/Landing"; 
 import  { Provider } from "react-redux"; 
 import  store  from "./components/store/store";
 import Alert from "./components/Layout/alert"; 
@@ -43,8 +43,9 @@ const  App = () =>  {
                   <div className = "w-full flex justify-between h-auto bg-gulshan-inner">
                     <div className = "w-2/12 bg-gulshan-dascar  h-screen ">
                         <SidebarLeft/>
+                        
                     </div>
-                    <div className = "w-8/12">
+                    <div className = "w-9/12">
                       <Route exact path = "/hello" component = {Hello} /> 
                       <Route exact path = "/profiles" component = {Profiles}/>
                       <PrivateRoute exact path = "/dashboard" component = {Dashboard}/>
@@ -60,8 +61,8 @@ const  App = () =>  {
 
                     </div>
                    
-                    <div className = "w-2/12  ml-16 bg-gulshan-dascar h-screen">
-                      hello4
+                    <div className = "w-2/12  ml-4 bg-gulshan-dascar h-screen">
+                      <Alert/>
                   </div>
                 </div>
             </div>

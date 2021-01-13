@@ -16,7 +16,7 @@ const PostForm = ({ addPost }) => {
              setText("");
              }}>
              <div className = "flex m-2">
-                 <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 ml-2 rounded-full"/>
+                 <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 rounded-full"/>
                  <textarea
                 cols = "45"
                 rows ="2"

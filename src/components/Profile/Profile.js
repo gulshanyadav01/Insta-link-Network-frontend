@@ -13,7 +13,7 @@ const Profile = ({  getProfileById ,match, profile:{profile, loading, auth, } })
     useEffect(() => {
         getProfileById(match.params.userId);
 
-    },[getProfileById]); 
+    },[getProfileById, match.params.userId]); 
     return (
         <div>
             {profile ===  null || loading ? <div>loading</div>:(

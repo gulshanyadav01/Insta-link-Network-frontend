@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { getProfiles } from "../store/Actions/profile"
 import ProfileItem from "./ProfileItem"; 
-import Posts from "../posts/Posts"
+
 
 const Profiles = ({ getProfiles, profile: {profiles, loading }}) => {
     useEffect(() => {
         getProfiles();
-    }, [])
+    }, [getProfiles])
     return (
         <div className = "m-8 mt-20 w-full h-auto  ">
             <div className = "w-full bg-gulshan-inner  shadow-3xl rounded ">

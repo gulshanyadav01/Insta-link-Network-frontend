@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from "react-redux"; 
-// import Moment from "react-moment"; 
 import { deleteExperience } from "../../components/store/Actions/profile"; 
-import { FcOrganization} from "react-icons/fc"
 import { MdDelete } from "react-icons/md"
 import { BiBuildings } from "react-icons/bi"
 

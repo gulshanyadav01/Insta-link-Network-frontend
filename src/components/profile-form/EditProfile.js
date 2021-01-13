@@ -2,8 +2,7 @@ import React, {useState, useEffect} from 'react'
 import PropTypes from 'prop-types'
 import { createProfile, getCurrentProfile} from "../store/Actions/profile"; 
 import {connect} from "react-redux"; 
-import {withRouter, Link} from "react-router-dom"; 
-import { RiLockPasswordLine } from 'react-icons/ri';
+import {withRouter, Link} from "react-router-dom";
 import { FiInstagram } from "react-icons/fi"
 import { FaFacebookMessenger, FaYoutube } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"; 

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PrivateRoute from '../Routing/PrivateRoute'
 import { FaSchool } from "react-icons/fa"
 
 

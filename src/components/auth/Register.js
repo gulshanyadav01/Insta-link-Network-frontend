@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import {setAlert}  from "../store/Actions/alert"; 
 import PropTypes from "prop-types"
 import {register} from "../store/Actions/auth"; 
-import { Redirect, withRouter } from "react-router-dom"
-import { RiLockPasswordLine } from 'react-icons/ri';
+import {  withRouter } from "react-router-dom"
+
 
  const Register = ({setAlert, register, isAuthenticated, history }) => {
 
