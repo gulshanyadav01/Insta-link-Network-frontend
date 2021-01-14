@@ -21,6 +21,7 @@ import Posts from "./components/posts/Posts"
 import Post from "./components/Post/Post"
 import Hello from "./Hello"
 import SidebarLeft from "./components/Layout/SidebarLeft"; 
+import SidebarRight from "./components/Layout/SidebarRight"
 
 if(localStorage.token){
   setAuthToken(localStorage.token);
@@ -62,7 +63,7 @@ const  App = () =>  {
                     </div>
                    
                     <div className = "w-2/12  ml-4 bg-gulshan-dascar h-screen">
-                      <Alert/>
+                      <SidebarRight/>
                   </div>
                 </div>
             </div>
