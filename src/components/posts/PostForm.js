@@ -27,8 +27,8 @@ const PostForm = ({ addPost }) => {
              </div>
                 <div className = "bg-gulshan-inputdivlow flex rounded-b-lg">
                     <button className = "  m-2  "><FaTelegram className = "w-8 h-8 inline text-royalblue-400 hover:text-royalblue-600" /></button>
-                    <div className = "w-24 h-8 m-2 px-1 py-1 rounded-2xl border border-royalblue-500 hover:bg-orange-500">
-                        <h1 className = "text-sm text-gulshan-fontc hover:font-bold hover:text-black " >who can see</h1>
+                    <div className = "w-24 h-8 m-2 px-1 py-1 rounded-2xl  bg-gulshan-blur border border-royalblue-500 hover:bg-gulshan-blu">
+                        <h1 className = "text-sm text-royalblue-500 font-bold hover:font-bold hover:text-royalblue-500 " >who can see</h1>
                     </div>
 
                 </div>
