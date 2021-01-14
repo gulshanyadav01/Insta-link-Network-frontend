@@ -62,8 +62,8 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
                     
                 </div>
                 <div className = "w-2/12 h-12 ml-12 mt-1 flex">
-                    { isAuthenticated &&  (<div className = "mt-1 text-gray-100 capitalize"> {user.name} </div>) }
-                    <img src = {Logo} alt = "helo" className = "w-8 h-8 ml-2 rounded-full cursor-pointer" />
+                    { isAuthenticated && !loading && (<div className = "mt-1 text-gray-100 capitalize"> {user.name} </div>) }
+                    {isAuthenticated && !loading && (<Link to = {`/profile/${user._id}`}><img src = {Logo} className = "w-8 h-8 rounded-full cursor-pointer" alt = "hello"/></Link>)}
                     {/* <button  onClick = {Logout} className = "font-bold"> <FiLogOut className = "inline text-red-700  hover:text-white"/> Logout </button> */}
                     {/* <div className = "w-8 h-8 rounded-full bg-gulshan-navar hover:bg-royalblue-500"> */}
                      {isAuthenticated && (
