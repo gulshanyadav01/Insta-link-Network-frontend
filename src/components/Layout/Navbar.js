@@ -58,7 +58,9 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
                 <div className = "w-2/12 h-12 flex ">
                     <Link to = "/profiles" > <BsFillPeopleFill className = "w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500"/> </Link>
                     <Link to ="/posts"> <TiMessages className = 'w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500'/></Link>
-                    <FaRegBell className = "w-6 h-6 m-2 text-gulshan-fontc hover:text-royalblue-500"/>
+                    <FaRegBell className = "w-6 h-6 m-2 inline text-gulshan-fontc hover:text-royalblue-500"/> 
+                       
+                   
                     
                 </div>
                 <div className = "w-2/12 h-12 ml-12 mt-1 flex">
