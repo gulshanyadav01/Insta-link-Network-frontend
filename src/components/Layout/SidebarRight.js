@@ -5,18 +5,18 @@ import Logo from "../../asset/images/gulshan1.png"
 const SidebarRight = props => {
     return (
         <div>
-            <div className = " mt-40">
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
-               <div className= "w-full h-8 rounded-l-full hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+            <div className = " mt-28">
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/> gulshan</div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
+               <div className= "w-full h-8 rounded-l-full rounded-r-full flex hover:bg-black bg-gulshan-inner"><img src = {Logo} alt = "hello" className = "w-8 h-8 mt-2 ml-2 rounded-full"/></div>
             </div>
         </div>
     )

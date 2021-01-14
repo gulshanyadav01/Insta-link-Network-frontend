@@ -18,7 +18,7 @@ const PostForm = ({ addPost }) => {
              <div className = "flex m-2">
                  <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 rounded-full"/>
                  <textarea
-                cols = "45"
+                cols = "50"
                 rows ="2"
                 className = "rounded mt-4 ml-2 bg-gulshan-inputdiv"
                 onChange = {(e) => setText(e.target.value)} 

@@ -63,7 +63,7 @@ const  App = () =>  {
                     </div>
                    
                     <div className = "w-2/12  ml-4 bg-gulshan-dascar h-screen">
-                      <SidebarRight/>
+                      {/* <SidebarRight/> */}
                   </div>
                 </div>
             </div>
