@@ -41,7 +41,7 @@ const  App = () =>  {
                 <Navbar/>
                   {/* </div> */}
                   <div className = "w-full flex justify-between h-auto bg-gulshan-inner">
-                    <div className = "w-2/12 bg-gulshan-dascar  h-screen ">
+                    <div className = "w-2/12 bg-gulshan-dascar ">
                         <SidebarLeft/>
                         
                     </div>

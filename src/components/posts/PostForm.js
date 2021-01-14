@@ -25,7 +25,7 @@ const PostForm = ({ addPost }) => {
                 placeholder = "Write Something .... "
                 value = {text} />
              </div>
-                <div className = "bg-gulshan-inputdivlow flex rounded-b">
+                <div className = "bg-gulshan-inputdivlow flex rounded-b-lg">
                     <button className = "  m-2  "><FaTelegram className = "w-8 h-8 inline text-royalblue-400 hover:text-royalblue-600" /></button>
                     <div className = "w-24 h-8 m-2 px-1 py-1 rounded-2xl border border-royalblue-500 hover:bg-orange-500">
                         <h1 className = "text-sm text-gulshan-fontc hover:font-bold hover:text-black " >who can see</h1>

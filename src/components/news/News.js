@@ -17,13 +17,13 @@ const News = () => {
                         </div>
                     
                 </div>
-                <div className = "w-80 h-32 ml-2 bg-gulshan-dascar  border-t-2 mt-2 border-gulshan-dascar hover:border-2 hover:border-limegreen-400 rounded">
-                        <div className = "m-2">
-                            <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 rounded-full"/>
-                        </div>
+                {/* <div className = "w-80 h-32 ml-2 bg-gulshan-dascar  border-t-2 mt-2 border-gulshan-dascar hover:border-2 hover:border-limegreen-400 rounded"> */}
+                        {/* <div className = "m-2"> */}
+                            {/* <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 rounded-full"/> */}
+                        {/* </div> */}
                         {/* <h1 className = "text-royalblue-600">Read</h1> */}
                     
-                </div>
+                {/* </div> */}
             </div>
         </div>
 

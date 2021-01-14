@@ -66,7 +66,9 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
                     <img src = {Logo} alt = "helo" className = "w-8 h-8 ml-2 rounded-full cursor-pointer" />
                     {/* <button  onClick = {Logout} className = "font-bold"> <FiLogOut className = "inline text-red-700  hover:text-white"/> Logout </button> */}
                     {/* <div className = "w-8 h-8 rounded-full bg-gulshan-navar hover:bg-royalblue-500"> */}
+                     {isAuthenticated && (
                         <FiLogOut onClick = {Logout} className = "w-6 h-6 mt-1 cursor-pointer text-scarlet-500 hover:text-royalblue-600 ml-4"/>
+                     )}   
                     {/* </div> */}
                     
                    

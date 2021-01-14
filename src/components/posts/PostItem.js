@@ -23,12 +23,12 @@ const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text,
                           
                     </div>
                             {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
-                    <div className = "h-auto  text-gulshan-fontc bg-gulshan-postimagetext  ">
-                            <h1 className = "ml-4 mr-4" >{text}</h1>
+                    <div className = "h-auto     ">
+                            <h1 className = "ml-4 mr-4 text-gulshan-fontc" >{text}</h1>
                     </div>
                             {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
                     <div className = "flex">
-                        <div className = "flex  w-full h-12 rounded-b  bg-gulshan-postimagebot">
+                        <div className = "flex  w-full h-12 rounded-b-lg  bg-gulshan-postimagebot">
                             <div className = "flex">
                                     <button  onClick = {() => addLike(_id)}><FaHeart className = "w-6 h-6 ml-3  text-red-500 inline hover:text-red-700"/> </button> 
                                     <h1 className = "ml-1 mt-3 font-bold text-sm hover:text-royalblue-500 text-gulshan-fontc">{`likes(${likes.length})`} </h1>
@@ -37,11 +37,11 @@ const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text,
                                     {/* <button className = "w-16 h-8 bg-blue-200 hover:bg-royalblue-300 ml-1 rounded " onClick = {() => removeLike(_id)}><AiOutlineDislike className = "w-8 h-8 ml-3  text-royalblue-500 inline"/></button>  */}
                                     <BiCommentDetail className = "w-6 h-6 mt-4 ml-12 text-gulshan-fontc hover:text-royalblue-500"/>
                                     <button className = "m-1"><Link to = {`/post/${_id}`} className = "font-bold text-sm hover:text-royalblue-600  ">Comment</Link></button>
-                                    {
+                                    {/* {
                                         !auth.loading && user === auth.user._id && (
                                             <button className = " w-16 h-8  ml-1 bg-red-400 hover:bg-red-600 rounded font-bold text-xs" onClick = {() => deletePost(_id)}>Delete</button>
                                         )
-                                    }
+                                    } */}
 
                             </div>
 
