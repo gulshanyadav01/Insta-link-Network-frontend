@@ -5,13 +5,15 @@ import { getPosts } from "../store/Actions/post"
 import PostItem from "./PostItem"; 
 import PostForm from "./PostForm"
 import { AiFillFlag } from "react-icons/ai"
+// import { getProfiles } from "../store/Actions/profile"; 
 
 import News from "../news/News"
 
-const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
+const Posts = ({ getPosts,  post: {posts, loading, }}) => {
 
    useEffect(() => {
        getPosts()
+    
    }, [getPosts, loading])
 
    
@@ -29,7 +31,7 @@ const Posts = ({ getPosts,  post: {posts, loading,  }}) => {
                                  {
                                 posts.map((post) =>{
                                     return(
-                                        <PostItem key = {post._id} post = {post}/>
+                                        <PostItem key = {post._id} post = {post} />
                                     )
                                 })
                             }
@@ -51,7 +53,8 @@ Posts.propTypes = {
 
 }
 const mapStateToProps = (state) => ({
-    post: state.post
+    post: state.post,
+
 })
 
 export default connect(mapStateToProps, { getPosts }) (Posts);

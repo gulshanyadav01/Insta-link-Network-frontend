@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"; 
 import { connect } from "react-redux"; 
@@ -6,9 +6,12 @@ import { addLike, removeLike, deletePost } from "../store/Actions/post";
 import Logo from "../../asset/images/gulshan1.png"  
 import { FaHeart } from "react-icons/fa"
 import { BiCommentDetail } from "react-icons/bi"
+// import { getProfiles } from "../store/Actions/profile"; 
 
 
-const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
+const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
+
+
     return (
     <div>
     <div className = "w-full ml-4 mt-8 h-auto bg-gulshan-dascar rounded-lg shadow">
@@ -17,7 +20,7 @@ const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text,
                
                     <div className = "bg-gulshan-postimagediv h-16 rounded-t-lg">
                             <div className = "flex m-2">
-                                <Link to = {`/profile/${auth.user._id}`}><img src = {Logo} alt = {name} className = "w-12 h-12 mt-2 rounded-full"/></Link>
+                                <Link to = {`/profile/${user}`}><img src = {Logo} alt = {name} className = "w-12 h-12 mt-2 rounded-full"/></Link>
                                 <h1 className = "font-bold text-royalblue-600 capitalize ml-2 mt-2">{name}</h1>
                             </div>
                           
@@ -49,11 +52,7 @@ const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text,
                     </div>
         {/* </div> */}
                 
-        </div>
-            
-            
-            
-            
+        </div>   
         </div>
     )
 }
@@ -70,7 +69,8 @@ Post.propTypes = {
 }
 const mapStateToProps = state => ({
     auth: state.authReducer,
+    profile:state.profile
     
 })
 
-export default connect(mapStateToProps, { addLike, removeLike, deletePost}) (Post);
+export default connect(mapStateToProps, { addLike, removeLike,  deletePost}) (Post);
