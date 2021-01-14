@@ -9,7 +9,6 @@ import { TiMessages } from "react-icons/ti"
 import { FaRegBell } from "react-icons/fa"
 import { BsFillPeopleFill } from "react-icons/bs"
 import { FaSearch } from "react-icons/fa"
-import { FiFilter } from "react-icons/fi"
 
 // import { FiLogOut } from "react-icons/fi"
 // import Logo from "../../asset/images/gulshan1.png"
@@ -39,15 +38,15 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
     return (
         <div>
             <div className = "w-full h-12 bg-gulshan-navbar flex rounded fixed ">
-                <div className = "w-2/12  h-12 flex">
+                <div className = "w-60  h-12 flex">
                     <Link to = "/posts"> <h1 className = "m-2 font-bold text-xl text-orange-500">Developers Network</h1> </Link>
                 </div>
-                <div className = "w-3/12 h-12 flex">
+                <div className = "w-4/12 h-12  flex">
                     <hr className = "w-1 h-full bg-gulshan-dascar"></hr>
-                    <FiFilter className = "w-8 h-8 text-royalblue-500 inline mt-2 mr-1"/>
-                    <div className = "w-full h-8 mt-2 mb-1 bg-gulshan-search rounded-full">
+                    {/* <FiFilter className = "w-8 h-8  text-royalblue-500 inline mt-2 mr-1"/> */}
+                    <div className = "w-full h-8 mt-2 mb-1 ml-16 bg-gulshan-search rounded-full">
                        
-                        <input type = "text" placeholder = "enter name for search" className = "bg-gulshan-search rounded-full ml-2"/>
+                        <input type = "text" placeholder = "enter name for search" className = "bg-gulshan-search rounded-full mt-1  ml-4"/>
                     </div>
                     <button className = "w-32 h-8 mt-2 mb-1 ml-1 rounded-full border border-royalblue-500"> <FaSearch className = "inline text-royalblue-600 "/> Search  </button> 
                  

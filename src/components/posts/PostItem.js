@@ -17,7 +17,7 @@ const Post = ({ auth,addLike, removeLike, deletePost,   post: { _id, name, text,
                
                     <div className = "bg-gulshan-postimagediv h-16 rounded-t-lg">
                             <div className = "flex m-2">
-                                <img src = {Logo} alt = {name} className = "w-12 h-12 mt-2 rounded-full"/>
+                                <Link to = {`/profile/${auth.user._id}`}><img src = {Logo} alt = {name} className = "w-12 h-12 mt-2 rounded-full"/></Link>
                                 <h1 className = "font-bold text-royalblue-600 capitalize ml-2 mt-2">{name}</h1>
                             </div>
                           
