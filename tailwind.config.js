@@ -16,6 +16,7 @@ module.exports = {
         "postimagediv":"#292946",
         "postimagetext":"#25253E",
         "postimagebot":"#292946",
+        "comment":"#212139",
         "blu":"#12284C",
         "blur":"#151D33",
         "search":"#373759",
@@ -159,7 +160,9 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['hover', "group-focus", 'focus' ,'active', ],
+    },
   },
   plugins: [],
 }

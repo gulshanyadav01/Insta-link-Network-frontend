@@ -40,7 +40,7 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
                     {isAuthenticated && !loading && (<Link to = {`/profile/${user._id}`}><h1 className = "text-royalblue-400 capitalize font-bold ml-2 mt-1 hover:underline">{user.name}</h1></Link>)}
                 </div>
                 <div className  = "mt-8">
-                    <h1 className = "text-royalblue-500 font-bold hover:text-royalblue-300"><RiDashboard2Line className = "w-6 h-6 text-limegreen-600 mr-2 inline"/><Link to =  "/dashboard"> Dashboard</Link></h1>
+                    <h1 className = "text-royalblue-500 font-bold hover:text-royalblue-300 group bg-gulshan-dascar text-white group-focus:text-yellow-300  "><RiDashboard2Line className = "w-6 h-6 text-limegreen-600 mr-2 inline"/><Link to =  "/dashboard"> Dashboard</Link></h1>
                     <h1  className = ' text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 '><BsFillPeopleFill className = "w-6 h-6 text-orange-600 mr-2 inline"/> <Link to = "/profiles">Developers</Link> </h1>
                     <h1 className = "text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 "><BiNews className = "w-6 h-6 text-red-600 mr-2 inline"/> <Link to = "/posts">Posts</Link> </h1>
                 </div>

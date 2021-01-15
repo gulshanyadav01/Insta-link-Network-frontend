@@ -7,7 +7,8 @@ import Logo from "../../asset/images/gulshan1.png"
 import { FaHeart } from "react-icons/fa"
 import { BiCommentDetail } from "react-icons/bi"
 // import { getProfiles } from "../store/Actions/profile"; 
-import Comment from "../Post/Comment"; 
+import Comments from "../Post/Comments"; 
+// import { comment } from 'postcss';
 
 
 const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
@@ -41,7 +42,7 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                                     {/* <button className = "w-16 h-8 bg-blue-200 hover:bg-royalblue-300 ml-1 rounded " onClick = {() => removeLike(_id)}><AiOutlineDislike className = "w-8 h-8 ml-3  text-royalblue-500 inline"/></button>  */}
                                     <BiCommentDetail className = "w-6 h-6 mt-4 ml-12 text-gulshan-fontc hover:text-royalblue-500"/>
                                     {/* <button className = "m-1" onClick = {() => { setShowComment(!showComment)}} "><Link to = {`/post/${_id}`} className = "font-bold text-sm hover:text-royalblue-600 >Comment</Link></button> */}
-                                    <button className = "m-1" onClick = {() => { setShowComment(!showComment)}} > comments</button>
+                                    <button className = "ml-1 mt-1 mr-1" onClick = {() => { setShowComment(!showComment)}} > comments</button>
                                     {/* {
                                         !auth.loading && user === auth.user._id && (
                                             <button className = " w-16 h-8  ml-1 bg-red-400 hover:bg-red-600 rounded font-bold text-xs" onClick = {() => deletePost(_id)}>Delete</button>
@@ -55,8 +56,8 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                     </div>
         {/* </div> */}
                  <div>
-                            {!showComment && (<div>
-                                        <Comment/>
+                            {!showComment &&  comments.length > 0 &&   (<div>
+                                        <Comments comments = {comments} />
                                     </div>)}
                             </div>
 
