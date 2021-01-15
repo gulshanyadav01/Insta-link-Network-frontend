@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"; 
 import { connect } from "react-redux"; 
@@ -7,10 +7,11 @@ import Logo from "../../asset/images/gulshan1.png"
 import { FaHeart } from "react-icons/fa"
 import { BiCommentDetail } from "react-icons/bi"
 // import { getProfiles } from "../store/Actions/profile"; 
+import Comment from "../Post/Comment"; 
 
 
 const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
-
+    const [showComment, setShowComment] = useState(false); 
 
     return (
     <div>
@@ -39,19 +40,26 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                             <div className = "flex ">
                                     {/* <button className = "w-16 h-8 bg-blue-200 hover:bg-royalblue-300 ml-1 rounded " onClick = {() => removeLike(_id)}><AiOutlineDislike className = "w-8 h-8 ml-3  text-royalblue-500 inline"/></button>  */}
                                     <BiCommentDetail className = "w-6 h-6 mt-4 ml-12 text-gulshan-fontc hover:text-royalblue-500"/>
-                                    <button className = "m-1"><Link to = {`/post/${_id}`} className = "font-bold text-sm hover:text-royalblue-600  ">Comment</Link></button>
+                                    {/* <button className = "m-1" onClick = {() => { setShowComment(!showComment)}} "><Link to = {`/post/${_id}`} className = "font-bold text-sm hover:text-royalblue-600 >Comment</Link></button> */}
+                                    <button className = "m-1" onClick = {() => { setShowComment(!showComment)}} > comments</button>
                                     {/* {
                                         !auth.loading && user === auth.user._id && (
                                             <button className = " w-16 h-8  ml-1 bg-red-400 hover:bg-red-600 rounded font-bold text-xs" onClick = {() => deletePost(_id)}>Delete</button>
                                         )
                                     } */}
+                                    
 
                             </div>
-
+                           
                         </div>
                     </div>
         {/* </div> */}
-                
+                 <div>
+                            {!showComment && (<div>
+                                        <Comment/>
+                                    </div>)}
+                            </div>
+
         </div>   
         </div>
     )
