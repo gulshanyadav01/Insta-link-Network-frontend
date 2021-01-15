@@ -9,10 +9,12 @@ import { BiCommentDetail } from "react-icons/bi"
 // import { getProfiles } from "../store/Actions/profile"; 
 import Comments from "../Post/Comments"; 
 // import { comment } from 'postcss';
+import { BsThreeDots } from "react-icons/bs"; 
 
 
 const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
     const [showComment, setShowComment] = useState(false); 
+    const [showDiv, setShowDiv] = useState(false); 
 
     return (
     <div>
@@ -20,10 +22,29 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                 {/* <div className = "ml-4 mt-3 "> */}
 
                
-                    <div className = "bg-gulshan-postimagediv h-16 rounded-t-lg">
+                    <div className = "bg-gulshan-postimagediv h-16 flex justify-between rounded-t-lg">
                             <div className = "flex m-2">
                                 <Link to = {`/profile/${user}`}><img src = {Logo} alt = {name} className = "w-12 h-12 mt-2 rounded-full"/></Link>
                                 <h1 className = "font-bold text-royalblue-600 capitalize ml-2 mt-2">{name}</h1>
+                            </div>
+                            {
+                                !showDiv &&  !auth.loading && user === auth.user._id && (
+                                    <div className = "w-2/5 mt-8 ml-24 rounded-xl shadow-xl relative h-52 bg-gulshan-inner">
+                                        {/* <h1>hello</h1> */}
+                                        <button className = "w-full h-10 rounded bg-gulshan-dascar hover:bg-black text-scarlet-500 " onClick = {() => deletePost(_id)}>DeletePost </button>
+                                    </div>
+                                )
+                            }
+                            <div className = ''>
+                                     {
+                                        !auth.loading && user === auth.user._id && (
+                                            <BsThreeDots className = "w-6 h-6 mr-3 text-gulshan-fontc " onClick = {() => {
+                                                setShowDiv(!showDiv)
+                                                
+                                            }}/>
+                                        )
+                                    }
+                              
                             </div>
                           
                     </div>
