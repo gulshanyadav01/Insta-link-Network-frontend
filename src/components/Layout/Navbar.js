@@ -9,6 +9,8 @@ import { TiMessages } from "react-icons/ti"
 import { FaRegBell } from "react-icons/fa"
 import { BsFillPeopleFill } from "react-icons/bs"
 import { FaSearch } from "react-icons/fa"
+import Alert from "../../components/Layout/alert"; 
+
 
 // import { FiLogOut } from "react-icons/fi"
 // import Logo from "../../asset/images/gulshan1.png"
@@ -77,6 +79,7 @@ const  Navbar = ({auth: {isAuthenticated, loading, user}, logout})  => {
                 
             </div>
             {/* <Hello/> */}
+            <Alert/>
 
         </div>
             
