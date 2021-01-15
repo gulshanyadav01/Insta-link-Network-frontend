@@ -9,9 +9,9 @@ const Comment = ({text, user}) => {
             <div className  = "w-full h-auto m-2 flex">
                 <Link to = {`/profile/${user}`}> <img src = {Logo} alt = "hello" className = "w-8 h-8 rounded-full"/> </Link>
                 
-                <div className = " w-4/5 rounded-xl ml-4 h-auto m-1 bg-gulshan-inputdiv hover:bg-gulshan-blur">
-                <Link to = {`/profile/${user}`}> <h1 className = "ml-2 text-sm text-gulshan-fontc capitalize underline">gulshan yadav</h1> </Link>
-                    <h1 className = "ml-2 text-gulshan-fontc">{text}</h1>
+                <div className = " w-4/5 rounded-xl ml-4 h-auto m-1 bg-gulshan-blur hover:bg-gulshan-blu">
+                <Link to = {`/profile/${user}`}> <h1 className = "ml-2 text-sm text-gulshan-com capitalize hover:underline">gulshan yadav</h1> </Link>
+                    <h1 className = "ml-2 text-gulshan-com">{text}</h1>
                 </div>
                 
             </div>
