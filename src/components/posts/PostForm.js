@@ -9,7 +9,7 @@ import { FaTelegram } from "react-icons/fa"
 const PostForm = ({ addPost }) => {
     const [text, setText ] = useState("");  
     return (
-        <div className = "w-full h-auto m-4 bg-gulshan-inputdiv shadow rounded-lg  ">
+        <div className = "w-full h-auto m-4 bg-gulshan-inputdiv shadow rounded-lg border-l-2 border-gulshan-dascar hover:border-l-2 hover:border-limegreen-500 ">
             {/* <h1 className = "font-bold">Say Something </h1> */}
             <form onSubmit = {(e) => {e.preventDefault();
              addPost({text})
