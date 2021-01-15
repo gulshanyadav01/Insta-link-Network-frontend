@@ -12,7 +12,8 @@ const Comments = ({comments}) => {
                     {
                         comments.map((comment) => {
                             return(
-                                <Comment text = {comment.text} />
+                                
+                                <Comment text = {comment.text} user = {comment.user} />
                             )
                         })
                     }
