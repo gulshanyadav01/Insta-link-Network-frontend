@@ -40,9 +40,9 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
                     {isAuthenticated && !loading && (<Link to = {`/profile/${user._id}`}><h1 className = "text-royalblue-400 capitalize font-bold ml-2 mt-1 hover:underline">{user.name}</h1></Link>)}
                 </div>
                 <div className  = "mt-8 ">
-                    <div className = "flex"> <Link to = "/dashboard" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <RiDashboard2Line className="w-6 h-6 text-limegreen-600 mr-2 inline  group-focus:text-yellow-300 "/> Dashboard </Link> </div>
-                    <div className = "flex"> <Link to = "/profiles" className="group  text-blue-500 focus:text-yellow-600 font-bold group-focus:text-yellow-300"> <BsFillPeopleFill className="w-6 h-6 text-royalblue-600 mr-2 inline  group-focus:text-yellow-300 "/> Developers </Link> </div>
-                    <div className = "flex"> <Link to = "/posts" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <BiNews className="w-6 h-6 text-red-600 mr-2 inline  group-focus:text-yellow-300 "/> posts </Link> </div>
+                    <div className = "flex mt-4"> <Link to = "/dashboard" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <RiDashboard2Line className="w-6 h-6 text-limegreen-600 mr-2 inline  group-focus:text-yellow-300 "/> Dashboard </Link> </div>
+                    <div className = "flex mt-4"> <Link to = "/profiles" className="group  text-blue-500 focus:text-yellow-600 font-bold group-focus:text-yellow-300"> <BsFillPeopleFill className="w-6 h-6 text-royalblue-600 mr-2 inline  group-focus:text-yellow-300 "/> Developers </Link> </div>
+                    <div className = "flex mt-4"> <Link to = "/posts" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <BiNews className="w-6 h-6 text-red-600 mr-2 inline  group-focus:text-yellow-300 "/> posts </Link> </div>
                 </div>
                     {/* <Link to = "/profiles" className="group text-blue-500 focus:text-yellow-600 font-bold "> <BsFillPeopleFill className="w-6 h-6 text-orange-600 mr-2 inline  group-focus:text-yellow-300 "/> Developers </Link>
                     <Link to = "/posts" className="group text-blue-500 focus:text-yellow-600 font-bold "> <BiNews className="w-6 h-6 text-orange-600 mr-2 inline  group-focus:text-yellow-300 "/> News </Link>
