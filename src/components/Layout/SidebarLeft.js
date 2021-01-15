@@ -39,11 +39,21 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
                     {isAuthenticated && !loading && (<Link to = {`/profile/${user._id}`}><img src = {Logo} className = "w-8 h-8 rounded-full cursor-pointer" alt = "hello"/></Link>)}
                     {isAuthenticated && !loading && (<Link to = {`/profile/${user._id}`}><h1 className = "text-royalblue-400 capitalize font-bold ml-2 mt-1 hover:underline">{user.name}</h1></Link>)}
                 </div>
-                <div className  = "mt-8">
-                    <h1 className = "text-royalblue-500 font-bold hover:text-royalblue-300 group bg-gulshan-dascar text-white group-focus:text-yellow-300  "><RiDashboard2Line className = "w-6 h-6 text-limegreen-600 mr-2 inline"/><Link to =  "/dashboard"> Dashboard</Link></h1>
-                    <h1  className = ' text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 '><BsFillPeopleFill className = "w-6 h-6 text-orange-600 mr-2 inline"/> <Link to = "/profiles">Developers</Link> </h1>
-                    <h1 className = "text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 "><BiNews className = "w-6 h-6 text-red-600 mr-2 inline"/> <Link to = "/posts">Posts</Link> </h1>
+                <div className  = "mt-8 ">
+                    <div className = "flex"> <Link to = "/dashboard" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <RiDashboard2Line className="w-6 h-6 text-limegreen-600 mr-2 inline  group-focus:text-yellow-300 "/> Dashboard </Link> </div>
+                    <div className = "flex"> <Link to = "/profiles" className="group  text-blue-500 focus:text-yellow-600 font-bold group-focus:text-yellow-300"> <BsFillPeopleFill className="w-6 h-6 text-royalblue-600 mr-2 inline  group-focus:text-yellow-300 "/> Developers </Link> </div>
+                    <div className = "flex"> <Link to = "/posts" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <BiNews className="w-6 h-6 text-red-600 mr-2 inline  group-focus:text-yellow-300 "/> posts </Link> </div>
                 </div>
+                    {/* <Link to = "/profiles" className="group text-blue-500 focus:text-yellow-600 font-bold "> <BsFillPeopleFill className="w-6 h-6 text-orange-600 mr-2 inline  group-focus:text-yellow-300 "/> Developers </Link>
+                    <Link to = "/posts" className="group text-blue-500 focus:text-yellow-600 font-bold "> <BiNews className="w-6 h-6 text-orange-600 mr-2 inline  group-focus:text-yellow-300 "/> News </Link>
+                    <h1  className = ' text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 '><BsFillPeopleFill className = "w-6 h-6  mr-2 inline"/> <Link to = "/profiles">Developers</Link> </h1>
+                    <h1 className = "text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 "><BiNews className = "w-6 h-6 text-red-600 mr-2 inline"/> <Link to = "/posts">Posts</Link> </h1> */}
+                
+                {/* <Link to = "#!" class="group text-blue-500 focus:text-yellow-600 ...">
+               <svg class="text-white group-focus:text-yellow-300 ..."></svg>
+               <RiDashboard2Line className = "w-6 h-6 text-limegreen-600 mr-2 inline"/> 
+               dashboard
+          </Link> */}
 
         
                 
