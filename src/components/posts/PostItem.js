@@ -10,6 +10,9 @@ import { BiCommentDetail } from "react-icons/bi"
 import Comments from "../Post/Comments"; 
 // import { comment } from 'postcss';
 import { BsThreeDots } from "react-icons/bs"; 
+import { MdDelete } from "react-icons/md"
+import {BsBookmarkFill } from "react-icons/bs"
+
 
 
 const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
@@ -28,10 +31,11 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                                 <h1 className = "font-bold text-royalblue-600 capitalize ml-2 mt-2">{name}</h1>
                             </div>
                             {
-                                !showDiv &&  !auth.loading && user === auth.user._id && (
-                                    <div className = "w-2/5 mt-8 ml-24 rounded-xl shadow-xl relative h-52 bg-gulshan-inner">
+                                showDiv &&  !auth.loading && user === auth.user._id && (
+                                    <div className = "w-2/5 mt-8 ml-24 rounded shadow-xl relative h-52 bg-gulshan-inner">
                                         {/* <h1>hello</h1> */}
-                                        <button className = "w-full h-10 rounded bg-gulshan-dascar hover:bg-black text-scarlet-500 " onClick = {() => deletePost(_id)}>DeletePost </button>
+                                        <button className = "w-full h-10 rounded bg-gulshan-dascar hover:bg-black text-scarlet-500 font-bold hover:font-bold" onClick = {() => deletePost(_id)}><MdDelete className = "inline w-8 h-8" />DeletePost </button>
+                                        <button className = "w-full h-10 mt-1 rounded bg-gulshan-dascar hover:bg-black text-limegreen-500 font-bold hover:font-bold" onClick = {() => deletePost(_id)}><BsBookmarkFill className = "inline w-8 h-8" />SavePost </button>
                                     </div>
                                 )
                             }
@@ -77,7 +81,7 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                     </div>
         {/* </div> */}
                  <div>
-                            {!showComment &&  comments.length > 0 &&   (<div>
+                            {showComment &&  comments.length > 0 &&   (<div>
                                         <Comments comments = {comments} />
                                     </div>)}
                             </div>
