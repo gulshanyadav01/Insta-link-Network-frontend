@@ -18,21 +18,22 @@ const Hello = () => {
     e.preventDefault(); 
     const formData = new FormData(); 
     formData.append("file", file); 
+    console.log(file);
 
-    try{
-      const headers = {
-        "Content-Type":"multipart/form-data"
+    // try{
+    //   const headers = {
+    //     "Content-Type":"multipart/form-data"
 
-      }
-      const res = await axios.post(""); 
+    //   }
+    //   const res = await axios.post(""); 
 
-      setUploadedFile({ fileName, filePath }); 
+    //   setUploadedFile({ fileName, filePath }); 
 
 
-    }catch(err){
+    // }catch(err){
       
 
-    }
+    // }
 
   }
     return(
