@@ -19,22 +19,6 @@ const Hello = () => {
     const formData = new FormData(); 
     formData.append("file", file); 
     console.log(file);
-
-    // try{
-    //   const headers = {
-    //     "Content-Type":"multipart/form-data"
-
-    //   }
-    //   const res = await axios.post(""); 
-
-    //   setUploadedFile({ fileName, filePath }); 
-
-
-    // }catch(err){
-      
-
-    // }
-
   }
     return(
         <div className = "w-full mt-52  ml-48   h-auto">
