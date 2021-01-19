@@ -36,39 +36,39 @@ const AddExperience = ({ addExprience, history }) => {
             <h2 className = "uppercase w-48 h-8 rounded-t  shadow px-1 py-1  font-bold bg-white text-limegreen-900  ">Add Experience</h2>
                 <form onSubmit = {onSubmit}>
                 <div className = " h-auto bg-white shadow-lg rounded">
-                <div className = "flex">
-                    <label for="title"><BsPeopleCircle className = "mt-5 w-8 h-6 text-cerise-600" /></label>
-                    <input
-                        className = "border-b-2 border-limegreen-500 px-2 py-2 m-1 w-11/12" 
-                        type = "text"
-                        placeholder = 'enter your Title'
-                        name = "title" 
-                        value = {title}
-                        onChange = {(e) => onChange(e)}
-                    /> 
-                </div> 
-                <div className = "flex">
-                    <label for="company"> <FaBuilding className = "mt-5 w-8 h-6 text-scarlet-400"/> </label>
-                    <input
-                        className = "border-b-2 border-limegreen-500 px-2 py-2 m-1 w-11/12" 
-                        type = "text"
-                        placeholder = 'enter your company'
-                        name = "company" 
-                        value = {company}
-                        onChange = {(e) => onChange(e)}
-                    /> 
-                </div> 
-                <div className = "flex">
-                    <label for="location"> <FaLocationArrow className = "mt-5 w-8 h-6 text-indigo-700"/> </label>
-                    <input
-                        className = "border-b-2 border-limegreen-500 px-2 py-2 m-1 w-11/12" 
-                        type = "text"
-                        placeholder = 'enter location'
-                        name = "location" 
-                        value = {location}
-                        onChange = {(e) => onChange(e)}
-                    /> 
-                </div> 
+                    <div className = "flex">
+                        <label for="title"><BsPeopleCircle className = "mt-5 w-8 h-6 text-cerise-600" /></label>
+                        <input
+                            className = "border-b-2 border-limegreen-500 px-2 py-2 m-1 w-11/12" 
+                            type = "text"
+                            placeholder = 'enter your Title'
+                            name = "title" 
+                            value = {title}
+                            onChange = {(e) => onChange(e)}
+                        /> 
+                    </div> 
+                    <div className = "flex">
+                        <label for="company"> <FaBuilding className = "mt-5 w-8 h-6 text-scarlet-400"/> </label>
+                        <input
+                            className = "border-b-2 border-limegreen-500 px-2 py-2 m-1 w-11/12" 
+                            type = "text"
+                            placeholder = 'enter your company'
+                            name = "company" 
+                            value = {company}
+                            onChange = {(e) => onChange(e)}
+                        /> 
+                    </div> 
+                    <div className = "flex">
+                        <label for="location"> <FaLocationArrow className = "mt-5 w-8 h-6 text-indigo-700"/> </label>
+                        <input
+                            className = "border-b-2 border-limegreen-500 px-2 py-2 m-1 w-11/12" 
+                            type = "text"
+                            placeholder = 'enter location'
+                            name = "location" 
+                            value = {location}
+                            onChange = {(e) => onChange(e)}
+                        /> 
+                    </div> 
                     <div className = "flex">   
                         <label for="from"> <BiCalendarPlus className = "mt-5 w-8 h-6 text-limegreen-700"/> </label>
                             <input 
