@@ -20,26 +20,13 @@ const Hello = () => {
     formData.append("file", file); 
     console.log(file);
 
-    // try{
-    //   const headers = {
-    //     "Content-Type":"multipart/form-data"
-
-    //   }
-    //   const res = await axios.post(""); 
-
-    //   setUploadedFile({ fileName, filePath }); 
-
-
-    // }catch(err){
-      
-
-    // }
+    
 
   }
     return(
         <div className = "w-full mt-52  ml-48   h-auto">
           <div className = "w-48 h-48 rounded shadow-2xl bg-gulshan-dascar">
-            <form>
+            <form onSubmit  = {onSubmit}>
               <input type = "file" className = "ml-10 mt-8" />
               {/* <label>for </label> */}
               <input type = "submit" value = "upload" className = "px-2 py-1 rounded cursor-pointer mt-8 ml-16 bg-orange-700 font-bold text-white"/>
