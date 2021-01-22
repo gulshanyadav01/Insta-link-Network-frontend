@@ -46,8 +46,7 @@ const PostForm = ({ addPost }) => {
                         <h1 className = "text-sm text-royalblue-500 font-bold hover:font-bold hover:text-royalblue-500 " >who can see</h1>
                     </div>
                 </div>
-            </form>
-           
+            </form>   
         </div>
     )
 }
