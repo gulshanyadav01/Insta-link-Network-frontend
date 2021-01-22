@@ -10,12 +10,16 @@ import FileUpload from "./FileUpload";
 
 const PostForm = ({ addPost }) => {
     const [text, setText ] = useState("");  
+
     const [showFile, setShowFile] = useState(false); 
+
+
     return (
         <div className = "w-full h-auto m-4 bg-gulshan-inputdiv shadow rounded-lg border-l-2 border-gulshan-dascar hover:border-l-2 hover:border-limegreen-500 ">
             {/* <h1 className = "font-bold">Say Something </h1> */}
             <form onSubmit = {(e) => {e.preventDefault();
              addPost({text})
+             console.log()
              setText("");
              }}>
              <div className = "flex m-2">
@@ -35,8 +39,8 @@ const PostForm = ({ addPost }) => {
              </div>
                 <div className = "bg-gulshan-inputdivlow flex rounded-b-lg">
                     <button className = "m-2"><FaTelegram className = "w-8 h-8 inline text-royalblue-400 hover:text-royalblue-600" /></button>
-                    <div className = "w-8 h-8 mt-2 rounded-full bg-royalblue-400 hover:bg-royalblue-600 hover:text-black ">
-                        <BiImageAdd className = "w-6 h-6 ml-1 mt-1 text-royalblue-600 cursor-pointer hover:text-black " onClick = {() => {setShowFile(!showFile)}}/>
+                    <div className = "w-8 h-8 mt-2 rounded-full bg-orange-600  ">
+                        <BiImageAdd className = "w-6 h-6 ml-1 mt-1 text-black cursor-pointer  " onClick = {() => {setShowFile(!showFile)}}/>
                     </div>
                     <div className = "w-24 h-8 m-2 px-1 py-1 rounded-2xl  bg-gulshan-blur border border-royalblue-500 hover:bg-gulshan-blu">
                         <h1 className = "text-sm text-royalblue-500 font-bold hover:font-bold hover:text-royalblue-500 " >who can see</h1>
