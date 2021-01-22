@@ -52,8 +52,7 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                             </div>
                           
                     </div>
-                            {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
-                    <div className = "h-auto     ">
+                    <div className = "h-auto">
                             <h1 className = "ml-4 mr-4 text-gulshan-fontc" >{text}</h1>
                     </div>
                             {/* <hr className = "w-full h-0.5 bg-gray-100"></hr> */}
