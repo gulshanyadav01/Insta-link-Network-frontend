@@ -73,10 +73,7 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                                             <button className = " w-16 h-8  ml-1 bg-red-400 hover:bg-red-600 rounded font-bold text-xs" onClick = {() => deletePost(_id)}>Delete</button>
                                         )
                                     } */}
-                                    
-
-                            </div>
-                           
+                            </div>   
                         </div>
                     </div>
         
