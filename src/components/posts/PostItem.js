@@ -22,9 +22,6 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
     return (
     <div>
     <div className = "w-full ml-4 mt-8 h-auto bg-gulshan-dascar rounded-lg shadow border-l-2 border-gulshan-dascar hover:border-l-2 hover:border-limegreen-500 ">
-                
-
-               
                     <div className = "bg-gulshan-postimagediv h-16 flex justify-between rounded-t-lg">
                             <div className = "flex m-2">
                                 <Link to = {`/profile/${user}`}><img src = {Logo} alt = {name} className = "w-12 h-12 mt-2 rounded-full"/></Link>
