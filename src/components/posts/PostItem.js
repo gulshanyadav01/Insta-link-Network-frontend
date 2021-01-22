@@ -81,7 +81,7 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                     </div>
         
                  <div>
-                    {showComment &&  comments.length > 0 &&   (
+                        {showComment &&  comments.length > 0 &&   (
                         <div>
                             <Comments comments = {comments} />
                         </div>)}
