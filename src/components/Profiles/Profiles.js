@@ -11,22 +11,15 @@ const Profiles = ({ getProfiles, profile: {profiles, loading }}) => {
     }, [getProfiles])
     return (
         <div className = "m-8 mt-20 w-full h-auto  ">
-            <div className = "w-full bg-gulshan-inner  shadow-3xl rounded ">
-                { loading ? <div><h1>loading</h1></div> : <div className = "flex flex-wrap w-full">
-                    {profiles.length> 0 ? (
-                        profiles.map(profile => (
-                            <ProfileItem key = {profile._id} profile = {profile}/>
-                        ))
-                    ): <h1>No profiles found</h1>}
-                </div> }
-
-            </div>
-            {/* <div className = "w-2/5 bg-white shadow mx-1 my-1 rounded">
-            <Posts/> */}
-
-            {/* </div> */}
-            
-            
+                <div className = "w-full bg-gulshan-inner  shadow-3xl rounded ">
+                        { loading ? <div><h1>loading</h1></div> : <div className = "flex flex-wrap w-full">
+                            {profiles.length> 0 ? (
+                                profiles.map(profile => (
+                                    <ProfileItem key = {profile._id} profile = {profile}/>
+                                ))
+                            ): <h1>No profiles found</h1>}
+                        </div> }
+                </div>
         </div>
         
     )
