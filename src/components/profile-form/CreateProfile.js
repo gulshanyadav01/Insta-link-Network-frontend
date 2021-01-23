@@ -230,8 +230,6 @@ CreateProfile.propTypes = {
 
 }
 
-// const mapStateToProps = state => ({
 
-// })
 
 export default connect(null, {createProfile})(withRouter(CreateProfile)); 
