@@ -58,7 +58,6 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                             </div>
                             <div className = "flex ">
                                     <BiCommentDetail className = "w-6 h-6 mt-4 ml-12 cursor-pointer text-gulshan-fontc hover:text-royalblue-500" onClick = {() => { setShowComment(!showComment)}} />
-                                    {/* <button className = "m-1" onClick = {() => { setShowComment(!showComment)}} "><Link to = {`/post/${_id}`} className = "font-bold text-sm hover:text-royalblue-600 >Comment</Link></button> */}
                                     <h1 className = "ml-1 mt-3 cursor-pointer mr-1 text-gulshan-fontc font-bold hover:text-royalblue-500" onClick = {() => { setShowComment(!showComment)}} > comments</h1>
                                     {/* {
                                         !auth.loading && user === auth.user._id && (
