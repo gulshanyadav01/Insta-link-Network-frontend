@@ -8,7 +8,6 @@ import { FaHeart } from "react-icons/fa"
 import { BiCommentDetail } from "react-icons/bi"
 // import { getProfiles } from "../store/Actions/profile"; 
 import Comments from "../Post/Comments"; 
-// import { comment } from 'postcss';
 import { BsThreeDots } from "react-icons/bs"; 
 import { MdDelete } from "react-icons/md"
 import {BsBookmarkFill } from "react-icons/bs"
