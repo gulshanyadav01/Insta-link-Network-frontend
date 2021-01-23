@@ -41,30 +41,28 @@ const  App = () =>  {
             <div className = "w-full">
                 <Navbar/>
                   {/* </div> */}
-                  <div className = "w-full flex justify-between h-auto bg-gulshan-inner">
-                    <div className = "w-2/12 bg-gulshan-dascar ">
-                        <SidebarLeft/>
-                        
-                    </div>
-                    <div className = "w-9/12">
-                      <Route exact path = "/hello" component = {Hello} /> 
-                      <Route exact path = "/profiles" component = {Profiles}/>
-                      <PrivateRoute exact path = "/dashboard" component = {Dashboard}/>
-                      <PrivateRoute exact path = "/createprofile" component = {CreateProfile}/>
-                      <PrivateRoute exact path = "/edit-profile" component = {EditProfile}/>
-                      <PrivateRoute exact path = "/add-experience" component = {AddExperience}/>
-                      <PrivateRoute exact path = "/add-education" component = {AddEducation}/>
-                      <PrivateRoute exact path = "/posts" component = {Posts}/>
-                      <Route exact path = "/register" component = {Register}/>
-                      <Route exact path = "/login" component = {Login}/>
-                      <Route exact path = "/profile/:userId" component = {Profile}/>
-                      <Route exact path  = "/post/:id" component = {Post}/>
-
-                    </div>
-                   
-                    <div className = "w-2/12  ml-4 bg-gulshan-dascar h-screen">
-                      {/* <SidebarRight/> */}
-                  </div>
+                      <div className = "w-full flex justify-between h-auto bg-gulshan-inner">
+                          <div className = "w-2/12 bg-gulshan-dascar ">
+                              <SidebarLeft/>
+                              
+                          </div>
+                          <div className = "w-9/12">
+                              <Route exact path = "/hello" component = {Hello} /> 
+                              <Route exact path = "/profiles" component = {Profiles}/>
+                              <PrivateRoute exact path = "/dashboard" component = {Dashboard}/>
+                              <PrivateRoute exact path = "/createprofile" component = {CreateProfile}/>
+                              <PrivateRoute exact path = "/edit-profile" component = {EditProfile}/>
+                              <PrivateRoute exact path = "/add-experience" component = {AddExperience}/>
+                              <PrivateRoute exact path = "/add-education" component = {AddEducation}/>
+                              <PrivateRoute exact path = "/posts" component = {Posts}/>
+                              <Route exact path = "/register" component = {Register}/>
+                              <Route exact path = "/login" component = {Login}/>
+                              <Route exact path = "/profile/:userId" component = {Profile}/>
+                              <Route exact path  = "/post/:id" component = {Post}/>
+                          </div>
+                        <div className = "w-2/12  ml-4 bg-gulshan-dascar h-screen">
+                          {/* <SidebarRight/> */}
+                      </div>
                 </div>
             </div>
         </Switch>

@@ -41,9 +41,9 @@ const Posts = ({ getPosts,  post: {posts, loading, }}) => {
 
                 </div>
                
-                <div className = " flex-column mt-4">
-                    <News/>
-                </div>
+                    <div className = " flex-column mt-4">
+                        <News/>
+                    </div>
             
         </div>
     )
