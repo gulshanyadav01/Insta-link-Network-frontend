@@ -24,7 +24,6 @@ const Profile = ({  getProfileById ,match, profile:{profile, loading, auth, } })
                 <div className = "w-full h-auto mt-4 flex rounded shadow bg-white ">
                     <ProfileEducation profile = {profile}  /><hr className = "w-0.5 h-auto  bg-gray-300"></hr>
                     <ProfileExperience profile = {profile} />
-                    
                 </div>
             </div>)}
         </div>
