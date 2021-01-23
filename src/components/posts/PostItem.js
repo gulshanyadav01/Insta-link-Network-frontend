@@ -6,7 +6,6 @@ import { addLike, removeLike, deletePost } from "../store/Actions/post";
 import Logo from "../../asset/images/gulshan1.png"  
 import { FaHeart } from "react-icons/fa"
 import { BiCommentDetail } from "react-icons/bi"
-// import { getProfiles } from "../store/Actions/profile"; 
 import Comments from "../Post/Comments"; 
 import { BsThreeDots } from "react-icons/bs"; 
 import { MdDelete } from "react-icons/md"
