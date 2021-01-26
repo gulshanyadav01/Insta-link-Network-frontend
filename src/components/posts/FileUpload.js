@@ -13,4 +13,8 @@ const FileUpload = () => {
     )
 }
 
+<<<<<<< HEAD
 export default FileUpload
+=======
+export default FileUpload;
+>>>>>>> 6f3350da1024b0309bbc81c862f1a589b8a91503
