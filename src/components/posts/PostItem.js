@@ -13,7 +13,7 @@ import {BsBookmarkFill } from "react-icons/bs"
 
 
 
-const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text, avatar, user, likes, comments, date  } }) => {
+const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text, avatar, user, likes, comments, date, image  } }) => {
     const [showComment, setShowComment] = useState(false); 
     const [showDiv, setShowDiv] = useState(false); 
 
@@ -49,6 +49,7 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                     </div>
                     <div className = "h-auto">
                             <h1 className = "ml-4 mr-4 text-gulshan-fontc" >{text}</h1>
+                            {image && <img src = {image} alt = {text} />}
                     </div>
                     <div className = "flex">
                         <div className = "flex  w-full h-12 rounded-b-lg  bg-gulshan-postimagebot">
