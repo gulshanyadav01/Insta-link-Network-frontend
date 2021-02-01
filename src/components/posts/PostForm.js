@@ -5,14 +5,14 @@ import { addPost } from "../store/Actions/post";
 import Logo from "../../asset/images/gulshan1.png"; 
 import { FaTelegram } from "react-icons/fa"
 import { BiImageAdd } from "react-icons/bi"
-import FileUpload from "./FileUpload"; 
+// import FileUpload from "./FileUpload"; 
 
 
 const PostForm = ({ addPost }) => {
     const [text, setText ] = useState("");  
     const [selectFile, setSelectFile ] = useState(""); 
 
-    const [showFile, setShowFile] = useState(null); 
+    const [showFile, setShowFile] = useState(); 
 
     const fileSelectHandler = (event) => {
         setSelectFile(event.target.files[0]); 
@@ -26,6 +26,7 @@ const PostForm = ({ addPost }) => {
         fd.append("text", text); 
         addPost(fd); 
         setText(""); 
+        setSelectFile();
         
         
     }
