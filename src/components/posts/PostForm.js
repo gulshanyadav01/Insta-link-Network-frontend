@@ -26,6 +26,7 @@ const PostForm = ({ addPost }) => {
         fd.append("text", text); 
         addPost(fd); 
         setText(""); 
+
         setSelectFile()
         
         
