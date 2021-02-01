@@ -10,18 +10,31 @@ import FileUpload from "./FileUpload";
 
 const PostForm = ({ addPost }) => {
     const [text, setText ] = useState("");  
+    const [selectFile, setSelectFile ] = useState(""); 
 
-    const [showFile, setShowFile] = useState(false); 
+    const [showFile, setShowFile] = useState(null); 
+
+    const fileSelectHandler = (event) => {
+        setSelectFile(event.target.files[0]); 
+        
+    }
+
+    const Submit = (e) => {
+        e.preventDefault(); 
+        const fd = new FormData(); 
+        fd.append("image", selectFile, selectFile.name); 
+        fd.append("text", text); 
+        addPost(fd); 
+        setText(""); 
+        
+        
+    }
 
 
     return (
         <div className = "w-full h-auto m-4 bg-gulshan-inputdiv shadow rounded-lg border-l-2 border-gulshan-dascar hover:border-l-2 hover:border-limegreen-500 ">
 
-            <form onSubmit = {(e) => {e.preventDefault();
-             addPost({text})
-             console.log()
-             setText("");
-             }}>
+            <form onSubmit = {Submit}>
              <div className = "flex m-2">
                  <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 rounded-full"/>
                  <div>
@@ -32,7 +45,12 @@ const PostForm = ({ addPost }) => {
                     onChange = {(e) => setText(e.target.value)} 
                     placeholder = "Write Something .... "
                     value = {text} />
-                    {showFile && <FileUpload/>}
+                    {showFile && 
+                    <div className = "relative  bg-gulshan-dascar w-ful h-64 rounded shadow flex">
+                    <input type = "file" accept = "./jpg,.png,.jpeg" className = " text-orange-500 m-1 mt-1" onChange =  {fileSelectHandler} />
+                    <img src = {Logo} alt = "preview" className = " m-1 w-3/5 h-60 "/>
+            
+                </div>}
                  </div>
                  
 
