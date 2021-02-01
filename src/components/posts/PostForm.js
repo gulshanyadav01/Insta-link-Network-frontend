@@ -25,7 +25,10 @@ const PostForm = ({ addPost }) => {
         fd.append("image", selectFile, selectFile.name); 
         fd.append("text", text); 
         addPost(fd); 
+        setText("")
+
         setText(""); 
+
         setSelectFile()
         
         
