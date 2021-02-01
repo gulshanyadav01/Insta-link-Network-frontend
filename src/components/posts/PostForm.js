@@ -21,9 +21,15 @@ const PostForm = ({ addPost }) => {
 
     const Submit = (e) => {
         e.preventDefault(); 
-        const fd = new FormData(); 
-        fd.append("image", selectFile, selectFile.name); 
-        fd.append("text", text); 
+        const fd = new FormData();
+        // if(selectFile){
+            fd.append("image", selectFile, selectFile.name); 
+        // } 
+        // if(text){
+            fd.append("text", text); 
+        // }
+       
+       
         addPost(fd); 
         setText("");
         setSelectFile(); 
