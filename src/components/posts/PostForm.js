@@ -50,7 +50,7 @@ const PostForm = ({ addPost }) => {
                     {showFile && 
                     <div className = "relative  bg-gulshan-dascar w-ful h-64 rounded shadow flex">
                     <input type = "file" accept = "./jpg,.png,.jpeg" className = " text-orange-500 m-1 mt-1" onChange =  {fileSelectHandler} />
-                    <img src = {Logo} alt = "preview" className = " m-1 w-3/5 h-60 "/>
+                    {/* <img src = {Logo} alt = "preview" className = " m-1 w-3/5 h-60 "/> */}
             
                 </div>}
                  </div>
