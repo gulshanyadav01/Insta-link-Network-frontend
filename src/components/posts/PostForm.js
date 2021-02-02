@@ -10,7 +10,7 @@ import { BiImageAdd } from "react-icons/bi"
 
 const PostForm = ({ addPost }) => {
     const [text, setText ] = useState("");  
-    const [selectFile, setSelectFile ] = useState(""); 
+    const [selectFile, setSelectFile ] = useState(); 
 
     const [showFile, setShowFile] = useState(); 
 
@@ -21,6 +21,18 @@ const PostForm = ({ addPost }) => {
 
     const Submit = (e) => {
         e.preventDefault(); 
+        const fd = new FormData();
+        // if(selectFile){
+            fd.append("image", selectFile, selectFile.name); 
+        // } 
+        // if(text){
+            fd.append("text", text); 
+        // }
+       
+       
+        addPost(fd); 
+        setText("");
+        setSelectFile();
         const fd = new FormData(); 
         if(selectFile){
             fd.append("image", selectFile, selectFile.name); 
@@ -33,6 +45,7 @@ const PostForm = ({ addPost }) => {
         // setSelectFile()
         
         
+
     }
 
 
