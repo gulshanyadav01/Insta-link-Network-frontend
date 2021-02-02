@@ -16,7 +16,7 @@ const ProfileTop = ({ profile:{user:{avatar, name},
     
  }) => {
     return (
-        <div className = "w-full h-72 rounded shadow bg-white ">
+        <div className = "w-full h-72  shadow bg-white ">
             <div className = "w-full h-20 rounded-t bg-gradient-to-r from-gulshan-1200 via-pink-300  to-gulshan-1300 flex-column">
                 <img src = {Logo} className = "w-48 mt-10 h-48 mx-auto my-auto border-4 border-white rounded-full" alt = {name}/>
                 <div className = "flex">
