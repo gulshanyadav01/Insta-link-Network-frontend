@@ -32,7 +32,7 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
     // )
 
     return (
-        <div className = "w-full flex h-full  bg-gulshan-side">
+        <div className = "w-full flex h-full   bg-gulshan-side">
             <div className = "w-full mt-20 ml-4">
                <h1 className = "text-gulshan-fontc font-semibold text-lg">Profile  </h1>
                 <div className = "flex mt-4">
