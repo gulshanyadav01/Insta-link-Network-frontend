@@ -21,20 +21,15 @@ const PostForm = ({ addPost }) => {
 
     const Submit = (e) => {
         e.preventDefault(); 
-        const fd = new FormData();
-        // if(selectFile){
+        const fd = new FormData(); 
+        if(selectFile){
             fd.append("image", selectFile, selectFile.name); 
-        // } 
-        // if(text){
+        }
+        if(text){
             fd.append("text", text); 
-        // }
-       
-       
+        }
         addPost(fd); 
-        setText("");
-        setSelectFile();
-        
-        
+        setText(""); 
 
     }
 
@@ -81,4 +76,4 @@ PostForm.propTypes = {
     addPost: PropTypes.func.isRequired
 }
 
-export default connect(null, {addPost})(PostForm);
+export default connect(null, {addPost})(PostForm)
