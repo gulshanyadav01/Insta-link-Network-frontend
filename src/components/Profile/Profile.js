@@ -17,7 +17,7 @@ const Profile = ({  getProfileById ,match, profile:{profile, loading, auth, } })
     return (
         <div>
             {profile ===  null || loading ? <div>loading</div>:(
-            <div className = " ml-8 mt-20 w-3/5  ">
+            <div className = " ml-12 mt-20 w-11/12 ">
                     <ProfileTop profile = {profile}/>
                     <ProfileAbout profile = {profile} />
                     <ProfileSkills profile = {profile} />
