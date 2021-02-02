@@ -33,16 +33,6 @@ const PostForm = ({ addPost }) => {
         addPost(fd); 
         setText("");
         setSelectFile();
-        const fd = new FormData(); 
-        if(selectFile){
-            fd.append("image", selectFile, selectFile.name); 
-        }
-        if(text){
-            fd.append("text", text); 
-        }
-        addPost(fd); 
-        setText(""); 
-        // setSelectFile()
         
         
 
