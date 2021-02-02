@@ -30,7 +30,7 @@ const PostForm = ({ addPost }) => {
         }
         addPost(fd); 
         setText(""); 
-        // setSelectFile()
+
     }
 
 
