@@ -15,7 +15,8 @@ const PostForm = ({ addPost }) => {
     const [showFile, setShowFile] = useState(); 
 
     const fileSelectHandler = (event) => {
-        setSelectFile(event.target.files[0]); 
+        setSelectFile(event.target.files[0]);
+          
         
     }
 
