@@ -25,4 +25,4 @@ ProfileItem.propTypes = {
 
 }
 
-export default ProfileItem
+export default ProfileItem;
