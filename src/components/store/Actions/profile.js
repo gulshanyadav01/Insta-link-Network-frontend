@@ -250,7 +250,7 @@ export const deleteAccount = (history) => async dispatch => {
             history.push("/login"); 
         } catch (error) {
             dispatch({
-                type: PROFILE_ERROR,
+                type: PROFILE_ERROR
                 payload: {msg: error.response.statusText, status: error.response.status}
             })
             
