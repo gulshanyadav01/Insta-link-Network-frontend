@@ -17,7 +17,7 @@ export const getCurrentProfile = () => async dispatch => {
         type:CLEAR_PROFILE
     })
     try{
-        const res = await axios.get("http://localhost:8000/api/profile/me"); 
+        const res = await axios.get("https://social-backend1.herokuapp.com/api/profile/me"); 
         
         dispatch({
             type:GET_PROFILE,
@@ -36,7 +36,7 @@ export const getCurrentProfile = () => async dispatch => {
 // get all profiles 
 export const getProfiles = () => async dispatch => {
     try{
-        const res = await axios.get("http://localhost:8000/api/profile");
+        const res = await axios.get("https://social-backend1.herokuapp.com/api/profile");
         dispatch({
             type:GET_PROFILES,
             payload: res.data
@@ -54,7 +54,7 @@ export const getProfiles = () => async dispatch => {
 export const getProfileById = (userId) => async dispatch => {
     console.log("hi")
     try{
-        const res = await axios.get(`http://localhost:8000/api/profile/user/${userId}`)
+        const res = await axios.get(`https://social-backend1.herokuapp.com/api/profile/user/${userId}`)
         dispatch({
             type:GET_PROFILE,
             payload:res.data
@@ -71,7 +71,7 @@ export const getProfileById = (userId) => async dispatch => {
 // get github repos
 export const getGithubRepos = username => async dispatch => {
     try{
-        const res = await axios.get(`http://localhost:8000/api/profile/github/${username}`)
+        const res = await axios.get(`https://social-backend1.herokuapp.com/api/profile/github/${username}`)
         dispatch({
             type:GET_REPOS,
             payload: res.data
@@ -95,7 +95,7 @@ export const createProfile = (formData, history, edit = false) => async dispatch
                 "Content-Type":"application/json"
             }
         }
-        const res = await axios.post("http://localhost:8000/api/profile/",formData, config); 
+        const res = await axios.post("https://social-backend1.herokuapp.com/api/profile/",formData, config); 
         dispatch({
             type:GET_PROFILE,
             payload: res.data
@@ -134,7 +134,7 @@ export const addExprience = (formData, history) => async dispatch => {
                 "Content-Type":"application/json"
             }
         }
-        const res  = await axios.put("http://localhost:8000/api/profile/experience", formData, config); 
+        const res  = await axios.put("https://social-backend1.herokuapp.com/api/profile/experience", formData, config); 
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data
@@ -165,7 +165,7 @@ export const addEducation = (formData, history) => async dispatch => {
                 "Content-Type":"application/json"
             }
         }
-        const res  = await axios.put("http://localhost:8000/api/profile/education", formData, config); 
+        const res  = await axios.put("https://social-backend1.herokuapp.com/api/profile/education", formData, config); 
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data
@@ -192,7 +192,7 @@ export const addEducation = (formData, history) => async dispatch => {
 
 export const deleteExperience = id => async dispatch => {
     try {
-        const res = await axios.delete(`http://localhost:8000/api/profile/experience/${id}`)
+        const res = await axios.delete(`https://social-backend1.herokuapp.com/api/profile/experience/${id}`)
         dispatch({
             type:UPDATE_PROFILE,
             payload: res.data
@@ -213,7 +213,7 @@ export const deleteExperience = id => async dispatch => {
 export const deleteEducation = id => async dispatch => {
     console.log("hello")
     try {
-        const res = await axios.delete(`http://localhost:8000/api/profile/education/${id}`)
+        const res = await axios.delete(`https://social-backend1.herokuapp.com/api/profile/education/${id}`)
         dispatch({
             type:UPDATE_PROFILE,
             payload: res.data
@@ -237,7 +237,7 @@ export const deleteAccount = (history) => async dispatch => {
     console.log("delete account"); 
     if(window.confirm("are you sure this cannot be undone")){
         try {
-                 await axios.delete(`http://localhost:8000/api/profile/`)
+                 await axios.delete(`https://social-backend1.herokuapp.com/api/profile`)
             dispatch({
                 type:CLEAR_PROFILE
             }); 

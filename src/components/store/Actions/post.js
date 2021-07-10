@@ -12,7 +12,7 @@ import {
 // get posts 
 export const getPosts = () => async dispatch => {
     try{
-        const res = await axios.get("http://localhost:8000/api/post/")
+        const res = await axios.get("https://social-backend1.herokuapp.com/api/post/")
         dispatch({
             type: GET_POSTS,
             payload: res.data
@@ -32,7 +32,7 @@ export const getPosts = () => async dispatch => {
 //ADD  LIKES 
 export const addLike = (postId) => async dispatch => {
     try{
-        const res = await axios.put(`http://localhost:8000/api/post/like/${postId}`);
+        const res = await axios.put(`https://social-backend1.herokuapp.com/api/post/like/${postId}`);
 
         dispatch({
             type: UPDATE_LIKES,
@@ -53,7 +53,7 @@ export const addLike = (postId) => async dispatch => {
 //remove   LIKES 
 export const removeLike  = (postId) => async dispatch => {
     try{
-        const res = await axios.put(`http://localhost:8000/api/post/unlike/${postId}`);
+        const res = await axios.put(`https://social-backend1.herokuapp.com/api/post/unlike/${postId}`);
 
         dispatch({
             type: UPDATE_LIKES,
@@ -75,7 +75,7 @@ export const removeLike  = (postId) => async dispatch => {
 export const deletePost = postId => async dispatch => {
     console.log("hi i am delete post")
     try{
-        await axios.delete(`http://localhost:8000/api/post/${postId}`); 
+        await axios.delete(`https://social-backend1.herokuapp.com/api/post/${postId}`); 
         dispatch({
             type: DELETE_POST,
             payload: postId
@@ -102,7 +102,7 @@ export const  addPost = formData => async dispatch => {
         }
     }
     try{
-        const res = await axios.post("http://localhost:8000/api/post", formData, config ); 
+        const res = await axios.post("https://social-backend1.herokuapp.com/api/post", formData, config ); 
         dispatch({
             type: ADD_POST,
             payload: res.data
@@ -120,9 +120,10 @@ export const  addPost = formData => async dispatch => {
 }
 
 //get single post by id 
+//https://social-backend1.herokuapp.com/api
 export const getPost = (id) => async dispatch => {
     try{
-        const res = await axios.get(`http://localhost:8000/api/post/${id}`)
+        const res = await axios.get(`https://social-backend1.herokuapp.com/api/post/${id}`)
 
         dispatch({
             type: GET_POST,

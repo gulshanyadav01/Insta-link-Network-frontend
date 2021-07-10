@@ -19,7 +19,7 @@ export const loadUser = () => async dispatch => {
 
     }
     try {
-        const res = await axios.get("http://localhost:8000/api/auth/"); 
+        const res = await axios.get("https://social-backend1.herokuapp.com/api/auth"); 
         dispatch({
             type:USER_LOADED,
             payload: res.data
@@ -48,7 +48,7 @@ export const register = ({name, email, password, history }) => async dispatch =>
             email,
             password
         }
-        const res  = await axios.post("http://localhost:8000/api/users", newUser); 
+        const res  = await axios.post("https://social-backend1.herokuapp.com/api/users", newUser); 
         // console.logif(isAuthenticated){
         //      console.log("hi")
         //     return <Redirect to = "/dashboard" />
@@ -89,7 +89,7 @@ export const login  = ({ email, password }) => async dispatch =>  {
     const body = JSON.stringify({ email, password}); 
     try{
        
-        const res  = await axios.post("http://localhost:8000/api/auth", body, config); 
+        const res  = await axios.post("https://social-backend1.herokuapp.com/api/auth", body, config); 
         // console.log(res.data)
         dispatch({
             type: LOGIN_SUCCESS,
