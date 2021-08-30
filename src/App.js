@@ -3,7 +3,7 @@ import Navbar from "./components/Layout/Navbar";
 // import Landing from "./components/Layout/Landing"; 
 import  { Provider } from "react-redux"; 
 import  store  from "./components/store/store";
-import Alert from "./components/Layout/alert"; 
+// import Alert from "./components/Layout/alert"; 
 import { loadUser } from "./components/store/Actions/auth"
 import setAuthToken from "./utils/setAuthToken";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"; 
@@ -21,7 +21,7 @@ import Posts from "./components/posts/Posts"
 import Post from "./components/Post/Post"
 import Hello from "./Hello"
 import SidebarLeft from "./components/Layout/SidebarLeft"; 
-import SidebarRight from "./components/Layout/SidebarRight"
+// import SidebarRight from "./components/Layout/SidebarRight"
 
 if(localStorage.token){
   setAuthToken(localStorage.token);
@@ -61,7 +61,7 @@ const  App = () =>  {
                               <Route exact path  = "/post/:id" component = {Post}/>
                           </div>
                         <div className = "w-2/12  ml-4 bg-gulshan-dascar h-screen">
-                          {/* <SidebarRight/> */}
+                          
                       </div>
                 </div>
             </div>

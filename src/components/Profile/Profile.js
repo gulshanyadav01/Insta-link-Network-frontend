@@ -14,6 +14,7 @@ const Profile = ({  getProfileById ,match, profile:{profile, loading, auth, } })
         getProfileById(match.params.userId);
 
     },[getProfileById, match.params.userId]); 
+
     return (
         <div>
             {profile ===  null || loading ? <div>loading</div>:(
@@ -21,7 +22,7 @@ const Profile = ({  getProfileById ,match, profile:{profile, loading, auth, } })
                     <ProfileTop profile = {profile}/>
                     <ProfileAbout profile = {profile} />
                     <ProfileSkills profile = {profile} />
-                <div className = "w-full h-auto mt-4 flex rounded shadow bg-white ">
+                <div className = "w-full bg-gulshan-dascar h-auto mt-4 flex rounded shadow ">
                     <ProfileEducation profile = {profile}  /><hr className = "w-0.5 h-auto  bg-gray-300"></hr>
                     <ProfileExperience profile = {profile} />
                 </div>

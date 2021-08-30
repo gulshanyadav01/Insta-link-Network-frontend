@@ -26,13 +26,10 @@ import {  withRouter } from "react-router-dom"
             setAlert("password do not match", 'danger');  
          }
          else{
-            //  console.log(formData);
+        
              register({name, email, password, history}); 
          }
-        //  if(isAuthenticated){
-        //      console.log("hi")
-        //     return <Redirect to = "/dashboard" />
-        // }
+        
          
      }
      
@@ -41,13 +38,13 @@ import {  withRouter } from "react-router-dom"
     return (
         <div className = "mx-auto my-auto w-72 h-72 mt-32">
             <form onSubmit = {onSubmit} >
-             <div className = "w-72 h-auto bg-white shadow-lg rounded">
+             <div className = "w-72 h-auto bg-gulshan-navbar shadow-lg rounded">
                 <div className = "mt-8 mb-4 ml-20 ">
                     <h1 className = "font-bold text-mango-600 underline">Register Yourself</h1>
                 </div>
                 <div>
                     <input 
-                        className = "focus:ring-red-400 focus:ring-2 px-2 py-2 m-2 w-11/12"
+                        className = "focus:ring-red-400 bg-gulshan-dascar text-white focus:ring-2 px-2 py-2 m-2 w-11/12"
                         type = "text"
                         placeholder = 'enter your name'
                         name = "name" 
@@ -57,7 +54,7 @@ import {  withRouter } from "react-router-dom"
                 </div>
                 <div>
                     <input 
-                        className = "focus:ring-red-400 focus:ring-2 px-2 py-2 m-2 w-11/12"
+                        className = "focus:ring-red-400 bg-gulshan-dascar text-white  focus:ring-2 px-2 py-2 m-2 w-11/12"
                         type = "email"
                         placeholder = 'enter your email'
                         name = "email" 
@@ -68,7 +65,7 @@ import {  withRouter } from "react-router-dom"
                 <div>
                   
                    <input 
-                        className = "focus:ring-red-400 focus:ring-2 px-2 py-2 m-2 w-11/12"
+                        className = "focus:ring-red-400  bg-gulshan-dascar text-white focus:ring-2 px-2 py-2 m-2 w-11/12"
                         type = "password"
                         placeholder = 'enter your password'
                         name = "password" 
@@ -80,7 +77,7 @@ import {  withRouter } from "react-router-dom"
                 </div> 
                 <div>
                     <input 
-                        className = "focus:ring-red-400 focus:ring-2 px-2 py-2 m-2 w-11/12"
+                        className = "focus:ring-red-400 bg-gulshan-dascar text-white focus:ring-2 px-2 py-2 m-2 w-11/12"
                         type = "password"
                         placeholder = 'enter your password again'
                         name = "password2" 
@@ -90,7 +87,7 @@ import {  withRouter } from "react-router-dom"
                 </div> 
                 <div>
                     <input 
-                        className = " px-2 font-bold  py-2 m-2 w-11/12"
+                        className = " px-2 font-bold bg-green-600 rounded cursor-pointer py-2 m-2 w-11/12"
                         type = "submit"
                         value = "submit" 
                         

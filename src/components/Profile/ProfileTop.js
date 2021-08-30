@@ -16,14 +16,14 @@ const ProfileTop = ({ profile:{user:{avatar, name},
     
  }) => {
     return (
-        <div className = "w-full h-72  shadow bg-white ">
+        <div className = "w-full h-72  shadow bg-gulshan-dascar ">
             <div className = "w-full h-20 rounded-t bg-gradient-to-r from-gulshan-1200 via-pink-300  to-gulshan-1300 flex-column">
                 <img src = {Logo} className = "w-48 mt-10 h-48 mx-auto my-auto border-4 border-white rounded-full" alt = {name}/>
                 <div className = "flex">
                     <div className = "ml-8 mb-8">
-                        <h1 className = "font-bold capitalize">{name}</h1>
-                        <h1 className = "capitalize">{status} at {company} </h1>
-                        <h1>{location}</h1>
+                        <h1 className = "font-bold capitalize text-royalblue-400">{name}</h1>
+                        <h1 className = "capitalize text-white">{status} at {company} </h1>
+                        <h1 className = "text-white" >{location}</h1>
                     </div>
                     <div className = "flex m-8">
                     {website &&  (

@@ -6,9 +6,13 @@ import ProfileItem from "./ProfileItem";
 
 
 const Profiles = ({ getProfiles, profile: {profiles, loading }}) => {
+
     useEffect(() => {
+
         getProfiles();
+        
     }, [getProfiles])
+
     return (
         <div className = "m-8 mt-20 w-full h-auto  ">
                 <div className = "w-full bg-gulshan-inner  shadow-3xl rounded ">

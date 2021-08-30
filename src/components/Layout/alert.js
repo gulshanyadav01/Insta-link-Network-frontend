@@ -11,14 +11,7 @@ const alert = ({alerts}) => alerts !== null && alerts.length > 0 && alerts.map(a
        
     </div>
 )) 
-// export const alert = () => {
-//     return(
-//         <div>
-//             <h1>hello bhai</h1>
-//         </div>
 
-//     )
-// }
 
 
 alert.propTypes = {

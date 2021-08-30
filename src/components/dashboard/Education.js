@@ -14,30 +14,12 @@ const Education = ({education, deleteEducation}) => {
             <h1 className = "text-royalblue-500 font-medium m-2">{exp.fieldOfStudy}</h1><hr className = "w-0.5 h-full bg-gulshan-inner"></hr>
             <button className = "px-3 py-0.5 bg-red-300 font-bold text-black rounded hover:bg-red-500 " onClick = {() => deleteEducation(exp._id)} ><MdDelete className = "w-6 h-6" /></button>
         </div>
-        // <tr key = {exp._id} className = " bg-red-500 mt-2 "> 
-        //     <div className = "h-20">
-        //         <h1>gulshan</h1>
-        //     </div>
-        //     {/* <td>{exp.company}</td>
-            
-        //     <td>{exp.title}</td>
-        //     <td>{exp.from}</td>
-        //     <td>
-        //        
-        //     </td> */}
-        // </tr>
+        
     ) )
     return (
         <div>
             <h2 className = "uppercase font-extrabold ml-8 mt-4 mb-8 text-xl text-white"> <MdSchool className = "inline w-6 h-6 mr-2 text-scarlet-500"/>Experience</h2>
-            {/* <table>
-                <thead>
-                    <tr>
-                       
-                    </tr>
-                </thead>
-                {/* <tbody>{experiences}</tbody> */}
-            {/* </table> */}
+            
             <div className = "w-2/5 ml-6  flex justify-between">
             <h1  className = "font-extrabold uppercase text-gray-500 ">Degree</h1>
             <h1 className = "font-extrabold uppercase text-gray-500">School</h1>

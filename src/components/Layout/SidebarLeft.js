@@ -7,6 +7,8 @@ import Logo from "../../asset/images/gulshan1.png";
 import { BsFillPeopleFill } from "react-icons/bs"
 import { RiDashboard2Line } from "react-icons/ri"
 import { BiNews } from "react-icons/bi"
+import { IoMdLogIn } from "react-icons/io"
+import { RiBallPenFill } from "react-icons/ri"
 
 
 const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
@@ -34,7 +36,7 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
     return (
         <div className = "w-full flex h-full   bg-gulshan-side">
             <div className = "w-full mt-20 ml-4">
-               <h1 className = "text-gulshan-fontc font-semibold text-lg">Profile  </h1>
+               <h1 className = "text-gulshan-fontc font-semibold text-lg">  </h1>
                 <div className = "flex mt-4">
                     {isAuthenticated && !loading && (<Link to = {`/profile/${user._id}`}><img src = {Logo} className = "w-8 h-8 rounded-full cursor-pointer" alt = "hello"/></Link>)}
                     {isAuthenticated && !loading && (<Link to = {`/profile/${user._id}`}><h1 className = "text-royalblue-400 capitalize font-bold ml-2 mt-1 hover:underline">{user.name}</h1></Link>)}
@@ -43,19 +45,10 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
                     <div className = "flex mt-4"> <Link to = "/dashboard" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <RiDashboard2Line className="w-6 h-6 text-limegreen-600 mr-2 inline  group-focus:text-yellow-300 "/> Dashboard </Link> </div>
                     <div className = "flex mt-4"> <Link to = "/profiles" className="group  text-blue-500 focus:text-yellow-600 font-bold group-focus:text-yellow-300"> <BsFillPeopleFill className="w-6 h-6 text-royalblue-600 mr-2 inline  group-focus:text-yellow-300 "/> Developers </Link> </div>
                     <div className = "flex mt-4"> <Link to = "/posts" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <BiNews className="w-6 h-6 text-red-600 mr-2 inline  group-focus:text-yellow-300 "/> posts </Link> </div>
-                </div>
-                    {/* <Link to = "/profiles" className="group text-blue-500 focus:text-yellow-600 font-bold "> <BsFillPeopleFill className="w-6 h-6 text-orange-600 mr-2 inline  group-focus:text-yellow-300 "/> Developers </Link>
-                    <Link to = "/posts" className="group text-blue-500 focus:text-yellow-600 font-bold "> <BiNews className="w-6 h-6 text-orange-600 mr-2 inline  group-focus:text-yellow-300 "/> News </Link>
-                    <h1  className = ' text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 '><BsFillPeopleFill className = "w-6 h-6  mr-2 inline"/> <Link to = "/profiles">Developers</Link> </h1>
-                    <h1 className = "text-royalblue-500 font-bold mt-2 hover:text-royalblue-300 "><BiNews className = "w-6 h-6 text-red-600 mr-2 inline"/> <Link to = "/posts">Posts</Link> </h1> */}
-                
-                {/* <Link to = "#!" class="group text-blue-500 focus:text-yellow-600 ...">
-               <svg class="text-white group-focus:text-yellow-300 ..."></svg>
-               <RiDashboard2Line className = "w-6 h-6 text-limegreen-600 mr-2 inline"/> 
-               dashboard
-          </Link> */}
+                    {!isAuthenticated && <div className = "flex mt-4"> <Link to = "/register" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <RiBallPenFill className="w-6 h-6 text-green-600 mr-2 inline  group-focus:text-yellow-300 "/> Register </Link> </div>}
+                    {!isAuthenticated && <div className = "flex mt-4"> <Link to = "/login" className="group  text-blue-500 focus:text-yellow-600 font-bold "> <IoMdLogIn className="w-6 h-6 text-green-600 mr-2 inline  group-focus:text-yellow-300 "/> Login </Link> </div>}
 
-        
+                </div>
                 
             </div>
 
@@ -63,20 +56,7 @@ const  SidebarLeft = ({auth: {isAuthenticated, loading, user}})  => {
             
 
             
-            // {/* <div className = "mt-8 ml-4 mr-2"> */}
-            //     {/* <h1 className = "text-2xl font-bold text-mango-500" >Social Network</h1> */}
-            //     {/* <Alert/> */}
-            // {/* </div> */}
-            // {/* <div className ="w-50 ml-4 mt-16  h-52 border-1 border-gray-100 bg-white  shadow rounded"> */}
-            // {/* <div className = "w-50 rounded-t h-8 bg-gradient-to-r from-gulshan-1200 via-pink-300  to-gulshan-1300"> */}
-            //     {/* <h1 className = "w-20 h-20 border-white border-4 rounded-full bg-cerise-500 hover:bg-cerise-600  m-auto"> </h1> */}
-            //      {/* <img src = {Logo} alt = "images"  className = "w-20 h-20 border-white border-4 rounded-full m-auto"/> */}
-            //     {/* <h1 className = "ml-10 capitalize font-bold hover:underline  ">gulshan yadav</h1> */}
-            // {/* </div> */}
-            // {/* </div> */}
-            // {/*  */}
             
-            // {/* <Link to = "/dashboard"  className = ' ml-4 mr-4 mt-3  hover:bg-gulshan-300 px-12 py-3 font-bold rounded text-gulshan-700 hover:text-gray-900 shadow '>Dashboard</Link> */}
         
 
     )

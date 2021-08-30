@@ -19,7 +19,7 @@ const Dashboard = ({getCurrentProfile, deleteAccount,  auth: {user}, profile: {p
     <h2 className = "uppercase mt-20 font-extrabold ml-6 text-xl text-white mb-8"><RiDashboard2Line className = "w-8 h-8 text-orange-600 mr-2 inline"/>Dashboard</h2>
 
     <DashboardAction/>
-    {/* <h3>welcome {user && user.name}</h3> */}
+    
     {profile === null ? <div> </div> :<div></div> }
     {profile !== null? (<div>
         <Experience experience = {profile.experience !== null ? profile.experience : []}/>

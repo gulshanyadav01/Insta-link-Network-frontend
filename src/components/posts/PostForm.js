@@ -48,7 +48,7 @@ const PostForm = ({ addPost }) => {
                  <img src = {Logo} alt = "hello" className = "w-12 h-12 mt-2 rounded-full"/>
                  <div>
                     <textarea
-                    cols = "50"
+                    cols = "40"
                     rows ="2"
                     className = "rounded mt-4 ml-2 bg-gulshan-inputdiv"
                     onChange = {(e) => setText(e.target.value)} 

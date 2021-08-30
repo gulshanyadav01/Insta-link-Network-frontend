@@ -25,7 +25,7 @@ import { Redirect } from 'react-router-dom';
             setAlert("password do not match", 'danger');  
          }
          else{
-            //  console.log(formData);
+           
              login({ email, password}); 
          }
          
@@ -33,6 +33,7 @@ import { Redirect } from 'react-router-dom';
      
      // redirect if logged in 
      if(isAuthenticated){
+
          return <Redirect to = "/posts" />
      }
      
@@ -40,53 +41,53 @@ import { Redirect } from 'react-router-dom';
     return (
         <div className = "mx-auto my-auto w-72 h-72 mt-32">
             <form onSubmit = {onSubmit} >
-             <div className = "w-72 h-auto bg-white shadow-lg rounded">
-                <div className = "mt-8 mb-4 ml-20 ">
-                    <h1 className = "font-bold text-mango-600 underline">Login Yourself</h1>
-                </div>
-                
-                <div>
+                <div className = "w-72 h-auto  bg-gulshan-navbar shadow-lg rounded">
+                    <div className = "mt-8 mb-4 ml-20 ">
+                        <h1 className = "font-bold text-mango-600 underline">Login Yourself</h1>
+                    </div>
+                    
+                    <div>
+                        <input 
+                            className = "focus:ring-red-400 bg-gulshan-dascar text-white focus:ring-2 px-2 py-2 m-2 w-11/12"
+                            type = "email"
+                            placeholder = 'enter your email'
+                            name = "email" 
+                            value = {email}
+                            onChange = {(e) => onChange(e)}
+                        /> 
+                    </div> 
+                    <div>
+                    
                     <input 
-                        className = "focus:ring-red-400 focus:ring-2 px-2 py-2 m-2 w-11/12"
-                        type = "email"
-                        placeholder = 'enter your email'
-                        name = "email" 
-                        value = {email}
-                        onChange = {(e) => onChange(e)}
-                    /> 
-                </div> 
-                <div>
-                  
-                   <input 
-                        className = "focus:ring-red-400 focus:ring-2 px-2 py-2 m-2 w-11/12"
-                        type = "password"
-                        placeholder = 'enter your password'
-                        name = "password" 
-                        value = {password}
-                        onChange = {(e) => onChange(e)}
-                        
-                    /> 
-                   
-                </div> 
-                <div>
-                    <input 
-                        className = "focus:ring-red-400 focus:ring-2 px-2 py-2 m-2 w-11/12"
-                        type = "password"
-                        placeholder = 'enter your password again'
-                        name = "password2" 
-                        value = {password2}
-                        onChange = {(e) => onChange(e)}
-                    /> 
-                </div> 
-                <div>
-                    <input 
-                        className = " px-2 font-bold  py-2 m-2 w-11/12"
-                        type = "submit"
-                        value = "submit" 
-                        
-                    /> 
-                </div>
-                </div> 
+                            className = "focus:ring-red-400 bg-gulshan-dascar text-white focus:ring-2 px-2 py-2 m-2 w-11/12"
+                            type = "password"
+                            placeholder = 'enter your password'
+                            name = "password" 
+                            value = {password}
+                            onChange = {(e) => onChange(e)}
+                            
+                        /> 
+                    
+                    </div> 
+                    <div>
+                        <input 
+                            className = "focus:ring-red-400 bg-gulshan-dascar text-white focus:ring-2 px-2 py-2 m-2 w-11/12"
+                            type = "password"
+                            placeholder = 'enter your password again'
+                            name = "password2" 
+                            value = {password2}
+                            onChange = {(e) => onChange(e)}
+                        /> 
+                    </div> 
+                    <div>
+                        <input 
+                            className = " px-2 font-bold cursor-pointer rounded  bg-green-500 py-2 m-2 w-11/12"
+                            type = "submit"
+                            value = "submit" 
+                            
+                        /> 
+                    </div>
+                    </div> 
             </form>
         </div>
     )
@@ -104,5 +105,4 @@ const mapStateToProps = (state ) => ({
 })
 
 
-export default connect(mapStateToProps, {setAlert, login})(Login); 
-// gulshan yadav ji kese ho 
+export default connect(mapStateToProps, {setAlert, login})(Login);
