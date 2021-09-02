@@ -11,6 +11,7 @@ import ProfileEducation from "./ProfileEducation";
 
 const Profile = ({  getProfileById ,match, profile:{profile, loading, auth, } }) => {
     useEffect(() => {
+        
         getProfileById(match.params.userId);
 
     },[getProfileById, match.params.userId]); 
@@ -42,4 +43,4 @@ const mapStateToProps = (state) => ({
     auth:state.authReducer
 })
 
-export default connect(mapStateToProps, {getProfileById })(Profile);
+export default connect(mapStateToProps, { getProfileById })(Profile);

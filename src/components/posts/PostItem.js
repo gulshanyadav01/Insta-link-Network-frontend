@@ -48,8 +48,8 @@ const Post = ({ auth,addLike, removeLike, deletePost ,  post: { _id, name, text,
                           
                     </div>
                     <div className = "h-auto">
-                            <h1 className = "ml-4 mr-4 text-gulshan-fontc" >{text}</h1>
-                            {image && <img src = {image} alt = {text} />}
+                            <h1 className = "ml-4 mr-4 text-royalblue-300" >{text}</h1>
+                            {image && <img src = {image} alt = {text}  className = "w-full object-fill"/>}
                     </div>
                     <div className = "flex">
                         <div className = "flex  w-full h-12 rounded-b-lg  bg-gulshan-postimagebot">

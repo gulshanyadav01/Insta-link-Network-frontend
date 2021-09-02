@@ -26,7 +26,7 @@ const Dashboard = ({getCurrentProfile, deleteAccount,  auth: {user}, profile: {p
         <hr className = "h-0.5 ml-4 w-3/5 bg-gray-500"></hr>
         <Education education = {profile.education !== null ? profile.education: []}/>
         <div>
-            <button onClick = {() => deleteAccount(history)} className = "px-2 py-1 bg-red-300 rounded hover:bg-red-500  m-4">Delete Account</button>
+            <button onClick = {() => deleteAccount(history)} className = "px-2 py-1 bg-red-300 rounded hover:bg-red-500  m-4 ml-48">Delete Account</button>
         </div>
 
     </div>

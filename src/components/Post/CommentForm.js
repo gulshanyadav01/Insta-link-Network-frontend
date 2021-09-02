@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-// import PropTypes from 'prop-types'
-// import { connect } from "react-redux"; 
-// import { addPost } from "../store/Actions/post"; 
+
 import Logo from "../../asset/images/gulshan1.png"; 
 import { FaTelegram } from "react-icons/fa"
 

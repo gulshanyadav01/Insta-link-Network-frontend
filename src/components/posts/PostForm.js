@@ -50,13 +50,14 @@ const PostForm = ({ addPost }) => {
                     <textarea
                     cols = "40"
                     rows ="2"
-                    className = "rounded mt-4 ml-2 bg-gulshan-inputdiv"
+                    className = "rounded mt-4 ml-2 bg-gulshan-inputdiv text-white"
                     onChange = {(e) => setText(e.target.value)} 
                     placeholder = "Write Something .... "
                     value = {text} />
                     {showFile && 
-                    <div className = "relative  bg-gulshan-dascar w-ful h-64 rounded shadow flex">
-                    <input type = "file" accept = "./jpg,.png,.jpeg" className = " text-orange-500 m-1 mt-1" onChange =  {fileSelectHandler} />
+                    <div className = "relative  bg-gulshan-dascar w-ful h-64 rounded shadow flex justify-center ">
+                    <input id = "inp" type = "file" accept = "./jpg,.png,.jpeg" className = " text-orange-500 m-1 mt-1 hidden" onChange =  {fileSelectHandler} />
+                    <label htmlFor = "inp" className = "cursor-pointer text-limegreen-600 mt-4 font-bold capitalize">Choose a file </label>
                     {/* <img src = {Logo} alt = "preview" className = " m-1 w-3/5 h-60 "/> */}
             
                 </div>}

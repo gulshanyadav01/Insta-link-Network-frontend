@@ -1,9 +1,7 @@
 import React, {  useEffect } from "react"; 
 import Navbar from "./components/Layout/Navbar"; 
-// import Landing from "./components/Layout/Landing"; 
 import  { Provider } from "react-redux"; 
 import  store  from "./components/store/store";
-// import Alert from "./components/Layout/alert"; 
 import { loadUser } from "./components/store/Actions/auth"
 import setAuthToken from "./utils/setAuthToken";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"; 
@@ -19,9 +17,8 @@ import Profiles from "./components/Profiles/Profiles";
 import Profile from "./components/Profile/Profile"
 import Posts from "./components/posts/Posts" 
 import Post from "./components/Post/Post"
-import Hello from "./Hello"
 import SidebarLeft from "./components/Layout/SidebarLeft"; 
-// import SidebarRight from "./components/Layout/SidebarRight"
+
 
 if(localStorage.token){
   setAuthToken(localStorage.token);
@@ -47,7 +44,8 @@ const  App = () =>  {
                               
                           </div>
                           <div className = "w-9/12">
-                              <Route exact path = "/hello" component = {Hello} /> 
+
+                              <Route exact  path = "/" component = {Profiles}/>
                               <Route exact path = "/profiles" component = {Profiles}/>
                               <PrivateRoute exact path = "/dashboard" component = {Dashboard}/>
                               <PrivateRoute exact path = "/createprofile" component = {CreateProfile}/>
